@@ -1,12 +1,31 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "growagardencalculator",
+  "version": "1.0.0",
   "private": true,
+  "description": "专业的 Grow A Garden 游戏计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+  "keywords": [
+    "grow-a-garden",
+    "calculator",
+    "roblox",
+    "farming-game",
+    "crop-value",
+    "mutation-calculator",
+    "pet-weight",
+    "trade-analysis",
+    "wfl"
+  ],
+  "author": "Grow A Garden Calculator Team",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out",
+    "analyze": "ANALYZE=true next build",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -31,5 +50,17 @@
     "eslint-config-next": "15.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/growagardencalculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/growagardencalculator/issues"
+  },
+  "homepage": "https://growagardencalculator.net"
 }
