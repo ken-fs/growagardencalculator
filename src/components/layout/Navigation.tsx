@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -11,6 +11,11 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const navItems = [
     { title: "计算器", href: "/", description: "作物价值计算" },
@@ -86,7 +91,7 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
         </div>
 
         {/* 移动端导航菜单 */}
-        {isOpen && (
+        {isMounted && isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
               {navItems.map((item) => (
