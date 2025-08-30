@@ -209,7 +209,7 @@ export const TradeAnalyzer: React.FC = () => {
               </div>
             ) : (
               <div className="text-center text-muted-foreground py-8">
-                输入交易价值并点击"分析交易"查看结果
+                输入交易价值并点击&quot;分析交易&quot;查看结果
               </div>
             )}
           </CardContent>

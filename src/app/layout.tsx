@@ -7,6 +7,7 @@ import {
   organizationJsonLd,
   webApplicationJsonLd,
 } from "@/components/seo/JsonLd";
+import { HydrationFix } from "@/components/HydrationFix";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,18 +20,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Grow A Garden 计算器 - 专业的 Roblox 农场游戏计算工具",
+  title: "Grow A Garden Calculator - Professional Roblox Farm Game Calculator",
   description:
-    "专业的 Grow A Garden 计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。帮助玩家优化农场收益，分析交易价值。",
+    "Professional Grow A Garden calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more. Help players optimize farm profits and analyze trade values.",
   keywords: [
     "Grow A Garden",
-    "计算器",
+    "Calculator",
     "Roblox",
-    "农场游戏",
-    "作物价值",
-    "突变计算",
-    "宠物重量",
-    "交易分析",
+    "Farm Game",
+    "Crop Value",
+    "Mutation Calculator",
+    "Pet Weight",
+    "Trade Analysis",
     "WFL",
     "Sheckles",
   ],
@@ -47,9 +48,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Grow A Garden 计算器 - 专业的 Roblox 农场游戏计算工具",
+    title:
+      "Grow A Garden Calculator - Professional Roblox Farm Game Calculator",
     description:
-      "专业的 Grow A Garden 计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+      "Professional Grow A Garden calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
     url: "https://growagardencalculator.net",
     siteName: "Grow A Garden Calculator",
     images: [
@@ -60,14 +62,15 @@ export const metadata: Metadata = {
         alt: "Grow A Garden Calculator",
       },
     ],
-    locale: "zh_CN",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grow A Garden 计算器 - 专业的 Roblox 农场游戏计算工具",
+    title:
+      "Grow A Garden Calculator - Professional Roblox Farm Game Calculator",
     description:
-      "专业的 Grow A Garden 计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+      "Professional Grow A Garden calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -84,6 +87,19 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
+  themeColor: "#4ade80",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -92,33 +108,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#4ade80" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
+        <HydrationFix />
         <JsonLd data={websiteJsonLd} />
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={webApplicationJsonLd} />

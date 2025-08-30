@@ -23,8 +23,8 @@ export const CropSelector: React.FC<CropSelectorProps> = ({
       value={value}
       onChange={onChange}
       className={className}
-      placeholder="选择作物"
-      searchPlaceholder="搜索作物..."
+      placeholder="Select Crop"
+      searchPlaceholder="Search crops..."
     />
   );
 };

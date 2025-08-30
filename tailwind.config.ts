@@ -42,7 +42,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // 科技主题自定义颜色
+        // Tech theme custom colors
         tech: {
           blue: "hsl(var(--tech-blue))",
           cyan: "hsl(var(--tech-cyan))",
@@ -122,7 +122,7 @@ const config: Config = {
           "0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
         strong:
           "0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 2px 10px -2px rgba(0, 0, 0, 0.05)",
-        // 科技主题阴影
+        // Tech theme shadows
         "tech-glow":
           "0 0 10px hsl(var(--tech-glow)), 0 0 20px hsl(var(--tech-glow)), 0 0 30px hsl(var(--tech-glow))",
         "tech-blue":

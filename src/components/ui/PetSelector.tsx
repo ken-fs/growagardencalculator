@@ -23,8 +23,8 @@ export const PetSelector: React.FC<PetSelectorProps> = ({
       value={value}
       onChange={onChange}
       className={className}
-      placeholder="选择宠物"
-      searchPlaceholder="搜索宠物..."
+      placeholder="Select Pet"
+      searchPlaceholder="Search pets..."
     />
   );
 };

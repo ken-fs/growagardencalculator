@@ -10,21 +10,24 @@ export default function NotFound() {
       <main className="max-w-4xl mx-auto px-4 py-16 text-center">
         <div className="mb-8">
           <h1 className="text-9xl font-bold text-gray-300 mb-4">404</h1>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">页面未找到</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Page Not Found
+          </h2>
           <p className="text-gray-600 mb-8">
-            抱歉，您访问的页面不存在或已被移动。
+            Sorry, the page you are looking for does not exist or has been
+            moved.
           </p>
         </div>
 
         <div className="space-y-4">
           <Link href="/">
             <Button size="lg" className="mr-4">
-              返回首页
+              Back to Home
             </Button>
           </Link>
           <Link href="/trade">
             <Button variant="outline" size="lg">
-              交易分析器
+              Trade Analyzer
             </Button>
           </Link>
         </div>
@@ -34,22 +37,24 @@ export default function NotFound() {
             href="/mutations"
             className="p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
           >
-            <h3 className="font-semibold text-gray-900 mb-2">突变百科</h3>
-            <p className="text-gray-600 text-sm">查看所有突变信息</p>
+            <h3 className="font-semibold text-gray-900 mb-2">Mutation Wiki</h3>
+            <p className="text-gray-600 text-sm">
+              View all mutation information
+            </p>
           </Link>
           <Link
             href="/crops"
             className="p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
           >
-            <h3 className="font-semibold text-gray-900 mb-2">作物百科</h3>
-            <p className="text-gray-600 text-sm">查看所有作物信息</p>
+            <h3 className="font-semibold text-gray-900 mb-2">Crop Wiki</h3>
+            <p className="text-gray-600 text-sm">View all crop information</p>
           </Link>
           <Link
             href="/pets-wiki"
             className="p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
           >
-            <h3 className="font-semibold text-gray-900 mb-2">宠物百科</h3>
-            <p className="text-gray-600 text-sm">查看所有宠物信息</p>
+            <h3 className="font-semibold text-gray-900 mb-2">Pet Wiki</h3>
+            <p className="text-gray-600 text-sm">View all pet information</p>
           </Link>
         </div>
       </main>

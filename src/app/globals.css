@@ -2,7 +2,7 @@
 
 @layer base {
   :root {
-    /* 暗色科技主题色彩方案 */
+    /* Dark tech theme color scheme */
     --background: 220 13% 9%;
     --foreground: 210 40% 98%;
     --card: 220 13% 12%;

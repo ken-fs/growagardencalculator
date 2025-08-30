@@ -17,9 +17,10 @@ import { formatCurrency } from "@/utils/calculator";
 export const PetWeightCalculator: React.FC = () => {
   const [selectedPet, setSelectedPet] = useState<string>("cow");
   const [weight, setWeight] = useState<number>(1);
-  const [result, setResult] = useState<{ value: number; pet: any } | null>(
-    null
-  );
+  const [result, setResult] = useState<{
+    value: number;
+    pet: { name: string; baseValue: number; rarity: string; category: string };
+  } | null>(null);
 
   const handlePetChange = useCallback((petId: string) => {
     setSelectedPet(petId);
@@ -49,23 +50,25 @@ export const PetWeightCalculator: React.FC = () => {
     <div className="max-w-4xl mx-auto p-6 space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
-          宠物重量计算器
+          Pet Weight Calculator
         </h1>
-        <p className="text-muted-foreground text-lg">计算宠物的重量和价值</p>
+        <p className="text-muted-foreground text-lg">
+          Calculate pet weight and value
+        </p>
         <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* 输入区域 */}
+        {/* Input Area */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">宠物设置</CardTitle>
-            <CardDescription>选择宠物并设置重量</CardDescription>
+            <CardTitle className="text-tech-glow">Pet Settings</CardTitle>
+            <CardDescription>Select pet and set weight</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-tech-glow mb-3">
-                选择宠物
+                Select Pet
               </label>
               <PetSelector
                 pets={pets}
@@ -77,7 +80,7 @@ export const PetWeightCalculator: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-tech-glow mb-3">
-                重量 (kg)
+                Weight (kg)
               </label>
               <Input
                 type="number"
@@ -85,7 +88,7 @@ export const PetWeightCalculator: React.FC = () => {
                 onChange={(e) => handleWeightChange(Number(e.target.value))}
                 min="0"
                 step="0.1"
-                placeholder="输入宠物重量"
+                placeholder="Enter pet weight"
                 className="tech-input"
               />
             </div>
@@ -94,29 +97,29 @@ export const PetWeightCalculator: React.FC = () => {
               <div className="p-4 bg-secondary/30 rounded-lg border border-tech-glow/30">
                 <h3 className="font-semibold text-tech-glow mb-3 flex items-center">
                   <span className="mr-2">🐾</span>
-                  宠物信息
+                  Pet Information
                 </h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <div className="flex justify-between">
-                    <span>名称:</span>
+                    <span>Name:</span>
                     <span className="text-tech-cyan">
                       {selectedPetData.name}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span>基础价值:</span>
+                    <span>Base Value:</span>
                     <span className="text-tech-blue">
                       {formatCurrency(selectedPetData.baseValue)} Sheckles
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span>稀有度:</span>
+                    <span>Rarity:</span>
                     <span className="text-tech-purple">
                       {selectedPetData.rarity}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span>类别:</span>
+                    <span>Category:</span>
                     <span className="text-tech-orange">
                       {selectedPetData.category}
                     </span>
@@ -131,24 +134,26 @@ export const PetWeightCalculator: React.FC = () => {
                 type="submit"
                 className="flex-1 tech-button hover:animate-pulse-glow"
               >
-                计算价值
+                Calculate Value
               </Button>
               <Button
                 onClick={handleReset}
                 variant="outline"
                 className="border-tech-glow text-tech-glow hover:bg-tech-glow hover:text-primary-foreground transition-all duration-300"
               >
-                重置
+                Reset
               </Button>
             </div>
           </CardContent>
         </Card>
 
-        {/* 结果区域 */}
+        {/* Results Area */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">计算结果</CardTitle>
-            <CardDescription>宠物价值分析</CardDescription>
+            <CardTitle className="text-tech-glow">
+              Calculation Results
+            </CardTitle>
+            <CardDescription>Pet value analysis</CardDescription>
           </CardHeader>
           <CardContent>
             {result ? (
@@ -162,25 +167,25 @@ export const PetWeightCalculator: React.FC = () => {
 
                 <div className="space-y-4 bg-secondary/30 rounded-lg p-4 border border-tech-glow/30">
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">宠物名称:</span>
+                    <span className="text-muted-foreground">Pet Name:</span>
                     <span className="font-medium text-tech-cyan">
                       {result.pet.name}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">基础价值:</span>
+                    <span className="text-muted-foreground">Base Value:</span>
                     <span className="font-medium text-tech-blue">
                       {formatCurrency(result.pet.baseValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">重量:</span>
+                    <span className="text-muted-foreground">Weight:</span>
                     <span className="font-medium text-tech-purple">
                       {weight} kg
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">总价值:</span>
+                    <span className="text-muted-foreground">Total Value:</span>
                     <span className="font-medium text-tech-glow">
                       {formatCurrency(result.value)}
                     </span>
@@ -190,17 +195,17 @@ export const PetWeightCalculator: React.FC = () => {
                 <div className="p-4 bg-secondary/30 rounded-lg border border-tech-glow/30">
                   <h4 className="font-medium text-tech-glow mb-3 flex items-center">
                     <span className="mr-2">🐾</span>
-                    宠物信息
+                    Pet Information
                   </h4>
                   <div className="text-sm text-muted-foreground space-y-2">
                     <div className="flex justify-between">
-                      <span>稀有度:</span>
+                      <span>Rarity:</span>
                       <span className="text-tech-purple">
                         {result.pet.rarity}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span>类别:</span>
+                      <span>Category:</span>
                       <span className="text-tech-orange">
                         {result.pet.category}
                       </span>
@@ -211,24 +216,26 @@ export const PetWeightCalculator: React.FC = () => {
             ) : (
               <div className="text-center text-muted-foreground py-12">
                 <div className="text-6xl mb-4">🐾</div>
-                <p className="text-lg">点击"计算价值"查看结果</p>
+                <p className="text-lg">
+                  Click &quot;Calculate Value&quot; to view results
+                </p>
               </div>
             )}
           </CardContent>
         </Card>
       </div>
 
-      {/* 宠物分类展示 */}
+      {/* Pet Categories Display */}
       <Card>
         <CardHeader>
-          <CardTitle>宠物分类</CardTitle>
-          <CardDescription>按类别查看所有宠物</CardDescription>
+          <CardTitle>Pet Categories</CardTitle>
+          <CardDescription>View all pets by category</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* 农场宠物 */}
+            {/* Farm Pets */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-3">🐄 农场宠物</h3>
+              <h3 className="font-semibold text-gray-800 mb-3">🐄 Farm Pets</h3>
               <div className="space-y-2">
                 {pets
                   .filter((p) => p.category === "farm")
@@ -246,9 +253,11 @@ export const PetWeightCalculator: React.FC = () => {
               </div>
             </div>
 
-            {/* 野生动物 */}
+            {/* Wild Animals */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-3">🦊 野生动物</h3>
+              <h3 className="font-semibold text-gray-800 mb-3">
+                🦊 Wild Animals
+              </h3>
               <div className="space-y-2">
                 {pets
                   .filter((p) => p.category === "wild")
@@ -266,9 +275,11 @@ export const PetWeightCalculator: React.FC = () => {
               </div>
             </div>
 
-            {/* 特殊宠物 */}
+            {/* Special Pets */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-3">⭐ 特殊宠物</h3>
+              <h3 className="font-semibold text-gray-800 mb-3">
+                ⭐ Special Pets
+              </h3>
               <div className="space-y-2">
                 {pets
                   .filter((p) => p.category === "special")

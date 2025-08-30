@@ -1,7 +1,7 @@
 import { Gear } from "@/types";
 
 export const gears: Gear[] = [
-  // 洒水器
+  // Sprinklers
   {
     id: "basic_sprinkler",
     name: "Basic Sprinkler",
@@ -83,7 +83,7 @@ export const gears: Gear[] = [
     rarity: "legendary",
   },
 
-  // 肥料
+  // Fertilizers
   {
     id: "basic_fertilizer",
     name: "Basic Fertilizer",
@@ -165,7 +165,7 @@ export const gears: Gear[] = [
     rarity: "legendary",
   },
 
-  // 工具
+  // Tools
   {
     id: "basic_hoe",
     name: "Basic Hoe",
@@ -327,7 +327,7 @@ export const gears: Gear[] = [
     rarity: "legendary",
   },
 
-  // 装饰品
+  // Decorations
   {
     id: "garden_gnome",
     name: "Garden Gnome",

@@ -1,3 +1,5 @@
+"use client";
+
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { crops } from "@/data/crops";
@@ -9,12 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { formatCurrency } from "@/utils/calculator";
-
-export const metadata = {
-  title: "作物百科 - Grow A Garden 计算器",
-  description:
-    "完整的 Grow A Garden 作物信息大全，包含所有作物类型、价值和稀有度。",
-};
 
 export default function CropsPage() {
   const fruitCrops = crops.filter((c) => c.category === "fruit");
@@ -42,32 +38,32 @@ export default function CropsPage() {
   const getRarityText = (rarity: string) => {
     switch (rarity) {
       case "common":
-        return "普通";
+        return "Common";
       case "uncommon":
-        return "不常见";
+        return "Uncommon";
       case "rare":
-        return "稀有";
+        return "Rare";
       case "epic":
-        return "史诗";
+        return "Epic";
       case "legendary":
-        return "传说";
+        return "Legendary";
       default:
-        return "未知";
+        return "Unknown";
     }
   };
 
   return (
     <div className="min-h-screen tech-dark-gradient relative">
-      {/* 科技背景效果 */}
+      {/* Tech background effect */}
       <div className="matrix-bg"></div>
       <Navigation />
       <main className="max-w-7xl mx-auto p-6 relative z-10">
         <div className="text-center mb-8 space-y-4">
           <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
-            作物百科
+            Crop Wiki
           </h1>
           <p className="text-muted-foreground text-lg">
-            完整的 Grow A Garden 作物信息大全
+            Complete Grow A Garden crop information guide
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
         </div>

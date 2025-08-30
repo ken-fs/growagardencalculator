@@ -9,10 +9,10 @@ export function usePerformance() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const startTime = performance.now();
+    const startTime = window.performance.now();
 
     const measurePerformance = () => {
-      const endTime = performance.now();
+      const endTime = window.performance.now();
       const loadTime = endTime - startTime;
 
       setPerformance({

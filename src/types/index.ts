@@ -1,19 +1,19 @@
-// 作物类型
+// Crop type
 export interface Crop {
   id: string;
   name: string;
   baseValue: number;
   image: string;
-  category: 'fruit' | 'vegetable' | 'flower' | 'special';
-  rarity: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+  category: "fruit" | "vegetable" | "flower" | "special";
+  rarity: "common" | "uncommon" | "rare" | "epic" | "legendary";
 }
 
-// 突变类型
+// Mutation type
 export interface Mutation {
   id: string;
   name: string;
   multiplier: number;
-  category: 'growth' | 'temperature' | 'environmental';
+  category: "growth" | "temperature" | "environmental";
   description: string;
   color: string;
 }
@@ -24,8 +24,8 @@ export interface Pet {
   name: string;
   baseValue: number;
   image: string;
-  rarity: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
-  category: 'farm' | 'wild' | 'special';
+  rarity: "common" | "uncommon" | "rare" | "epic" | "legendary";
+  category: "farm" | "wild" | "special";
 }
 
 // 装备类型
@@ -34,8 +34,8 @@ export interface Gear {
   name: string;
   baseValue: number;
   image: string;
-  category: 'sprinkler' | 'fertilizer' | 'tool' | 'decoration';
-  rarity: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+  category: "sprinkler" | "fertilizer" | "tool" | "decoration";
+  rarity: "common" | "uncommon" | "rare" | "epic" | "legendary";
 }
 
 // 计算器输入

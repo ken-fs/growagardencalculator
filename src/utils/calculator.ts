@@ -3,20 +3,20 @@ import { getCropById } from "@/data/crops";
 import { getMutationById } from "@/data/mutations";
 
 /**
- * 计算作物价值
+ * Calculate crop value
  */
 export const calculateCropValue = (
   input: CalculatorInput
 ): CalculationResult => {
   const crop = getCropById(input.cropId);
   if (!crop) {
-    throw new Error("作物不存在");
+    throw new Error("Crop not found");
   }
 
-  // 基础价值
+  // Base value
   const baseValue = crop.baseValue;
 
-  // 计算突变倍数
+  // Calculate mutation multiplier
   let totalMultiplier = 1;
   const mutations: Mutation[] = [];
 

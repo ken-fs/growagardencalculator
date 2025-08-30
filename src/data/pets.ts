@@ -1,7 +1,7 @@
 import { Pet } from "@/types";
 
 export const pets: Pet[] = [
-  // 农场宠物
+  // Farm Pets
   {
     id: "cow",
     name: "Cow",
@@ -83,7 +83,7 @@ export const pets: Pet[] = [
     rarity: "uncommon",
   },
 
-  // 野生动物
+  // Wild Animals
   {
     id: "fox",
     name: "Fox",
@@ -165,7 +165,7 @@ export const pets: Pet[] = [
     rarity: "rare",
   },
 
-  // 特殊宠物
+  // Special Pets
   {
     id: "golden_cow",
     name: "Golden Cow",

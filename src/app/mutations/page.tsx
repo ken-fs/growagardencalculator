@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "突变百科 - Grow A Garden 计算器",
+  title: "Mutation Wiki - Grow A Garden Calculator",
   description:
-    "完整的 Grow A Garden 突变信息大全，包含所有突变类型、倍数和获取方法。",
+    "Complete Grow A Garden mutation information guide, including all mutation types, multipliers and acquisition methods.",
 };
 
 export default function MutationsPage() {
@@ -26,26 +26,29 @@ export default function MutationsPage() {
 
   return (
     <div className="min-h-screen tech-dark-gradient relative">
-      {/* 科技背景效果 */}
+      {/* Tech background effect */}
       <div className="matrix-bg"></div>
       <Navigation />
       <main className="max-w-7xl mx-auto p-6 relative z-10">
         <div className="text-center mb-8 space-y-4">
           <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
-            突变百科
+            Mutation Wiki
           </h1>
-          <p className="text-muted-foreground text-lg">完整的 Grow A Garden 突变信息大全</p>
+          <p className="text-muted-foreground text-lg">
+            Complete Grow A Garden mutation information guide
+          </p>
           <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
         </div>
 
-        {/* 生长突变 */}
+        {/* Growth Mutations */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              ⭐ 生长突变
+              ⭐ Growth Mutations
             </CardTitle>
             <CardDescription>
-              只能选择一个生长突变，提供最高的价值倍数
+              Only one growth mutation can be selected, providing the highest
+              value multiplier
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -74,14 +77,15 @@ export default function MutationsPage() {
           </CardContent>
         </Card>
 
-        {/* 温度突变 */}
+        {/* Temperature Mutations */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              ❄️ 温度突变
+              ❄️ Temperature Mutations
             </CardTitle>
             <CardDescription>
-              只能选择一个温度突变，影响作物的生长环境
+              Only one temperature mutation can be selected, affecting crop
+              growth environment
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -110,14 +114,15 @@ export default function MutationsPage() {
           </CardContent>
         </Card>
 
-        {/* 环境突变 */}
+        {/* Environmental Mutations */}
         <Card>
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              ✨ 环境突变
+              ✨ Environmental Mutations
             </CardTitle>
             <CardDescription>
-              可以选择多个环境突变，提供各种特殊效果
+              Multiple environmental mutations can be selected, providing
+              various special effects
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -146,46 +151,58 @@ export default function MutationsPage() {
           </CardContent>
         </Card>
 
-        {/* 突变组合建议 */}
+        {/* Mutation Combination Recommendations */}
         <Card className="mt-8">
           <CardHeader className="tech-scan-line">
-            <CardTitle>突变组合建议</CardTitle>
-            <CardDescription>推荐的突变组合以获得最大价值</CardDescription>
+            <CardTitle>Mutation Combination Recommendations</CardTitle>
+            <CardDescription>
+              Recommended mutation combinations for maximum value
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="p-4 bg-gradient-to-r from-yellow-100 to-yellow-200 rounded-lg">
-                <h3 className="font-semibold text-yellow-800 mb-2">基础组合</h3>
-                <p className="text-yellow-700 text-sm mb-2">适合新手玩家</p>
+                <h3 className="font-semibold text-yellow-800 mb-2">
+                  Basic Combination
+                </h3>
+                <p className="text-yellow-700 text-sm mb-2">
+                  Suitable for new players
+                </p>
                 <ul className="text-yellow-700 text-sm space-y-1">
                   <li>• Golden (×20)</li>
                   <li>• Wet (×2)</li>
                   <li>• Choc (×2)</li>
-                  <li>• 总倍数: ×80</li>
+                  <li>• Total Multiplier: ×80</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-gradient-to-r from-blue-100 to-blue-200 rounded-lg">
-                <h3 className="font-semibold text-blue-800 mb-2">进阶组合</h3>
-                <p className="text-blue-700 text-sm mb-2">适合有经验的玩家</p>
+                <h3 className="font-semibold text-blue-800 mb-2">
+                  Advanced Combination
+                </h3>
+                <p className="text-blue-700 text-sm mb-2">
+                  Suitable for experienced players
+                </p>
                 <ul className="text-blue-700 text-sm space-y-1">
                   <li>• Rainbow (×50)</li>
                   <li>• Frozen (×10)</li>
                   <li>• Cooked (×10)</li>
-                  <li>• 总倍数: ×5,000</li>
+                  <li>• Total Multiplier: ×5,000</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-gradient-to-r from-purple-100 to-purple-200 rounded-lg">
-                <h3 className="font-semibold text-purple-800 mb-2">终极组合</h3>
+                <h3 className="font-semibold text-purple-800 mb-2">
+                  Ultimate Combination
+                </h3>
                 <p className="text-purple-700 text-sm mb-2">
-                  适合追求极限的玩家
+                  Suitable for players pursuing the limit
                 </p>
                 <ul className="text-purple-700 text-sm space-y-1">
                   <li>• Rainbow (×50)</li>
                   <li>• Frozen (×10)</li>
                   <li>• Shocked (×100)</li>
-                  <li>• 总倍数: ×50,000</li>
+                  <li>• Total Multiplier: ×50,000</li>
                 </ul>
               </div>
             </div>

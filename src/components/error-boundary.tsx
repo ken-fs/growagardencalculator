@@ -23,11 +23,11 @@ export class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error("ErrorBoundary caught an error:", error, errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
@@ -36,17 +36,22 @@ export class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center max-w-md mx-auto p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">出现错误</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              An Error Occurred
+            </h2>
             <p className="text-gray-600 mb-6">
-              抱歉，页面加载时出现了错误。请尝试刷新页面或返回首页。
+              Sorry, an error occurred while loading the page. Please try
+              refreshing the page or return to the home page.
             </p>
             <div className="space-x-4">
-              <Button onClick={() => window.location.reload()}>刷新页面</Button>
+              <Button onClick={() => window.location.reload()}>
+                Refresh Page
+              </Button>
               <Button
                 variant="outline"
                 onClick={() => (window.location.href = "/")}
               >
-                返回首页
+                Back to Home
               </Button>
             </div>
           </div>

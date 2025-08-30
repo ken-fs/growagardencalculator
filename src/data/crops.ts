@@ -1,7 +1,7 @@
 import { Crop } from "@/types";
 
 export const crops: Crop[] = [
-  // 常见水果
+  // Common Fruits
   {
     id: "apple",
     name: "Apple",
@@ -163,7 +163,7 @@ export const crops: Crop[] = [
     rarity: "uncommon",
   },
 
-  // 常见蔬菜
+  // Common Vegetables
   {
     id: "carrot",
     name: "Carrot",
@@ -325,7 +325,7 @@ export const crops: Crop[] = [
     rarity: "uncommon",
   },
 
-  // 花卉
+  // Flowers
   {
     id: "rose",
     name: "Rose",
@@ -447,7 +447,7 @@ export const crops: Crop[] = [
     rarity: "common",
   },
 
-  // 特殊作物
+  // Special Crops
   {
     id: "golden_apple",
     name: "Golden Apple",

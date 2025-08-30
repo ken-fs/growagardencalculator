@@ -26,8 +26,8 @@ export const IconSelector: React.FC<IconSelectorProps> = ({
   value,
   onChange,
   className = "",
-  placeholder = "选择项目",
-  searchPlaceholder = "搜索...",
+  placeholder = "Select Item",
+  searchPlaceholder = "Search...",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");

@@ -1,99 +1,102 @@
-# Grow A Garden 计算器
+# Grow A Garden Calculator
 
-一个功能齐全的 Grow A Garden 游戏计算器网站，基于 Next.js 15 和 TypeScript 构建。
+A comprehensive Grow A Garden game calculator website built with Next.js 15 and TypeScript.
 
-## 功能特性
+## Features
 
-### 🧮 核心计算器
-- **作物价值计算器** - 计算作物价值，支持突变和加成
-- **宠物重量计算器** - 计算宠物重量和价值
-- **WFL 交易分析器** - 分析交易是否公平 (Win/Fair/Loss)
+### 🧮 Core Calculators
 
-### 📚 百科大全
-- **突变百科** - 完整的突变信息，包含所有突变类型和倍数
-- **作物百科** - 所有作物信息，按类型和稀有度分类
-- **宠物百科** - 宠物信息大全
-- **装备百科** - 装备信息大全
+- **Crop Value Calculator** - Calculate crop values with mutations and bonuses
+- **Pet Weight Calculator** - Calculate pet weights and values
+- **WFL Trade Analyzer** - Analyze trade fairness (Win/Fair/Loss)
 
-### ✨ 高级功能
-- **突变组合验证** - 自动验证突变组合是否有效
-- **推荐突变组合** - 根据作物类型推荐最佳突变组合
-- **交易分析** - 智能分析交易价值，提供建议
-- **响应式设计** - 完美适配桌面和移动设备
+### 📚 Wiki Guides
 
-## 技术栈
+- **Mutation Wiki** - Complete mutation information with all types and multipliers
+- **Crop Wiki** - All crop information categorized by type and rarity
+- **Pet Wiki** - Complete pet information guide
+- **Gear Wiki** - Complete gear information guide
 
-- **框架**: Next.js 15 (App Router)
-- **语言**: TypeScript
-- **样式**: Tailwind CSS v4
-- **UI组件**: 自定义组件库
-- **状态管理**: React Hooks
-- **函数式编程**: 优先使用函数式组件和 Hooks
+### ✨ Advanced Features
 
-## 项目结构
+- **Mutation Combination Validation** - Automatically validate mutation combinations
+- **Recommended Mutation Combinations** - Get optimal mutation combinations for crop types
+- **Trade Analysis** - Intelligent trade value analysis with recommendations
+- **Responsive Design** - Perfect adaptation for desktop and mobile devices
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Custom component library
+- **State Management**: React Hooks
+- **Functional Programming**: Prioritize functional components and Hooks
+
+## Project Structure
 
 ```
 src/
-├── app/                    # Next.js App Router 页面
-│   ├── page.tsx           # 主页 (计算器)
-│   ├── trade/             # 交易分析页面
-│   ├── mutations/         # 突变百科页面
-│   ├── crops/             # 作物百科页面
-│   └── layout.tsx         # 根布局
-├── components/            # React 组件
-│   ├── calculator/        # 计算器相关组件
-│   ├── layout/           # 布局组件
-│   └── ui/               # 基础UI组件
-├── data/                 # 数据文件
-│   ├── crops.ts          # 作物数据
-│   ├── mutations.ts      # 突变数据
-│   ├── pets.ts           # 宠物数据
-│   └── gears.ts          # 装备数据
-├── types/                # TypeScript 类型定义
-│   └── index.ts          # 核心类型
-├── utils/                # 工具函数
-│   └── calculator.ts     # 计算器逻辑
-└── lib/                  # 库函数
-    └── utils.ts          # 通用工具函数
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Home page (calculator)
+│   ├── trade/             # Trade analysis page
+│   ├── mutations/         # Mutation wiki page
+│   ├── crops/             # Crop wiki page
+│   └── layout.tsx         # Root layout
+├── components/            # React components
+│   ├── calculator/        # Calculator related components
+│   ├── layout/           # Layout components
+│   └── ui/               # Basic UI components
+├── data/                 # Data files
+│   ├── crops.ts          # Crop data
+│   ├── mutations.ts      # Mutation data
+│   ├── pets.ts           # Pet data
+│   └── gears.ts          # Gear data
+├── types/                # TypeScript type definitions
+│   └── index.ts          # Core types
+├── utils/                # Utility functions
+│   └── calculator.ts     # Calculator logic
+└── lib/                  # Library functions
+    └── utils.ts          # Common utility functions
 ```
 
-## 开发指南
+## Development Guide
 
-### 安装依赖
+### Install Dependencies
 
 ```bash
 pnpm install
 ```
 
-### 开发模式
+### Development Mode
 
 ```bash
 pnpm dev
 ```
 
-### 构建生产版本
+### Build Production Version
 
 ```bash
 pnpm build
 ```
 
-### 启动生产服务器
+### Start Production Server
 
 ```bash
 pnpm start
 ```
 
-## 核心功能实现
+## Core Feature Implementation
 
-### 计算器逻辑
+### Calculator Logic
 
 ```typescript
-// 计算作物价值
+// Calculate crop value
 export const calculateCropValue = (input: CalculatorInput): CalculationResult => {
   const crop = getCropById(input.cropId);
   const baseValue = crop.baseValue;
-  
-  // 计算突变倍数
+
+  // Calculate mutation multiplier
   let totalMultiplier = 1;
   for (const mutationId of input.mutations) {
     const mutation = getMutationById(mutationId);
@@ -101,10 +104,10 @@ export const calculateCropValue = (input: CalculatorInput): CalculationResult =>
       totalMultiplier *= mutation.multiplier;
     }
   }
-  
+
   // 计算总价值
   const totalValue = baseValue * input.weight * input.quantity * totalMultiplier;
-  
+
   return { baseValue, totalValue, totalMultiplier, ... };
 };
 ```
@@ -114,15 +117,15 @@ export const calculateCropValue = (input: CalculatorInput): CalculationResult =>
 ```typescript
 // 验证突变组合
 export const validateMutationCombination = (mutations: string[]) => {
-  const growthMutations = mutations.filter(id => 
-    getMutationById(id)?.category === 'growth'
+  const growthMutations = mutations.filter(
+    (id) => getMutationById(id)?.category === "growth"
   );
-  
+
   // 生长突变只能选择一个
   if (growthMutations.length > 1) {
-    return { isValid: false, error: '只能选择一个生长突变' };
+    return { isValid: false, error: "只能选择一个生长突变" };
   }
-  
+
   return { isValid: true };
 };
 ```
@@ -133,7 +136,7 @@ export const validateMutationCombination = (mutations: string[]) => {
 - **结构化数据**: 使用 JSON-LD 结构化数据
 - **性能优化**: 代码分割和懒加载
 - **移动端优化**: 响应式设计和移动端友好
-- **语义化HTML**: 使用语义化标签提升可访问性
+- **语义化 HTML**: 使用语义化标签提升可访问性
 
 ## 部署
 

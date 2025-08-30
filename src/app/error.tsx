@@ -17,17 +17,20 @@ export default function Error({
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">出现错误</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Something went wrong
+        </h2>
         <p className="text-gray-600 mb-6">
-          抱歉，页面加载时出现了错误。请尝试刷新页面或返回首页。
+          Sorry, an error occurred while loading the page. Please try refreshing
+          the page or return to the home page.
         </p>
         <div className="space-x-4">
-          <Button onClick={reset}>重试</Button>
+          <Button onClick={reset}>Try again</Button>
           <Button
             variant="outline"
             onClick={() => (window.location.href = "/")}
           >
-            返回首页
+            Back to Home
           </Button>
         </div>
       </div>

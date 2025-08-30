@@ -18,14 +18,34 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
   }, []);
 
   const navItems = [
-    { title: "计算器", href: "/", description: "作物价值计算" },
-    { title: "重量计算器", href: "/weight", description: "宠物重量计算" },
-    { title: "宠物计算器", href: "/pets", description: "宠物价值计算" },
-    { title: "突变百科", href: "/mutations", description: "突变信息大全" },
-    { title: "作物百科", href: "/crops", description: "作物信息大全" },
-    { title: "宠物百科", href: "/pets-wiki", description: "宠物信息大全" },
-    { title: "装备百科", href: "/gears", description: "装备信息大全" },
-    { title: "交易分析", href: "/trade", description: "WFL 交易分析" },
+    { title: "Calculator", href: "/", description: "Crop value calculation" },
+    {
+      title: "Weight Calculator",
+      href: "/weight",
+      description: "Pet weight calculation",
+    },
+    {
+      title: "Pet Calculator",
+      href: "/pets",
+      description: "Pet value calculation",
+    },
+    {
+      title: "Mutation Wiki",
+      href: "/mutations",
+      description: "Complete mutation guide",
+    },
+    { title: "Crop Wiki", href: "/crops", description: "Complete crop guide" },
+    {
+      title: "Pet Wiki",
+      href: "/pets-wiki",
+      description: "Complete pet guide",
+    },
+    { title: "Gear Wiki", href: "/gears", description: "Complete gear guide" },
+    {
+      title: "Trade Analysis",
+      href: "/trade",
+      description: "WFL trade analysis",
+    },
   ];
 
   return (
@@ -38,12 +58,12 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 <span className="text-white font-bold text-lg">G</span>
               </div>
               <span className="text-xl font-bold text-foreground group-hover:text-tech-glow transition-colors duration-300">
-                Grow A Garden 计算器
+                Grow A Garden Calculator
               </span>
             </Link>
           </div>
 
-          {/* 桌面导航 */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
@@ -57,7 +77,7 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
             ))}
           </div>
 
-          {/* 移动端菜单按钮 */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <Button
               variant="ghost"
@@ -91,7 +111,7 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
           </div>
         </div>
 
-        {/* 移动端导航菜单 */}
+        {/* Mobile Navigation Menu */}
         {isMounted && isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-secondary/50 rounded-lg mt-2 border border-tech-glow/30 shadow-tech-glow">

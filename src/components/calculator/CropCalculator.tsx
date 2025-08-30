@@ -57,7 +57,7 @@ export const CropCalculator: React.FC = () => {
       const calculationResult = calculateCropValue(input);
       setResult(calculationResult);
     } catch (error) {
-      console.error("计算错误:", error);
+      console.error("Calculation error:", error);
     }
   }, [input]);
 
@@ -88,26 +88,30 @@ export const CropCalculator: React.FC = () => {
     <div className="max-w-6xl mx-auto p-6 space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
-          Grow A Garden 计算器
+          Grow A Garden Calculator
         </h1>
         <p className="text-muted-foreground text-lg">
-          计算你的作物价值，包括突变和加成
+          Calculate your crop values including mutations and bonuses
         </p>
         <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* 输入区域 */}
+        {/* Input Area */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">计算器设置</CardTitle>
-            <CardDescription>选择作物、设置参数并添加突变</CardDescription>
+            <CardTitle className="text-tech-glow">
+              Calculator Settings
+            </CardTitle>
+            <CardDescription>
+              Select crop, set parameters and add mutations
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            {/* 作物选择 */}
+            {/* Crop Selection */}
             <div>
               <label className="block text-sm font-medium text-tech-glow mb-3">
-                选择作物
+                Select Crop
               </label>
               <CropSelector
                 crops={crops}
@@ -117,11 +121,11 @@ export const CropCalculator: React.FC = () => {
               />
             </div>
 
-            {/* 基础参数 */}
+            {/* Basic Parameters */}
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-tech-glow mb-3">
-                  重量 (kg)
+                  Weight (kg)
                 </label>
                 <Input
                   type="number"
@@ -134,7 +138,7 @@ export const CropCalculator: React.FC = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-tech-glow mb-3">
-                  数量 (个)
+                  Quantity (units)
                 </label>
                 <Input
                   type="number"
@@ -148,7 +152,7 @@ export const CropCalculator: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-tech-glow mb-3">
-                朋友加成 (%)
+                Friend Bonus (%)
               </label>
               <Input
                 type="number"
@@ -162,15 +166,17 @@ export const CropCalculator: React.FC = () => {
               />
             </div>
 
-            {/* 突变选择 */}
+            {/* Mutation Selection */}
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-tech-glow">突变选择</h3>
+              <h3 className="text-xl font-semibold text-tech-glow">
+                Mutation Selection
+              </h3>
 
-              {/* 生长突变 */}
+              {/* Growth Mutations */}
               <div>
                 <h4 className="text-sm font-medium text-tech-cyan mb-3 flex items-center">
                   <span className="mr-2">⭐</span>
-                  生长突变 (只能选择一个)
+                  Growth Mutations (only one can be selected)
                 </h4>
                 <div className="grid grid-cols-2 gap-3">
                   {growthMutations.map((mutation) => (
@@ -189,11 +195,11 @@ export const CropCalculator: React.FC = () => {
                 </div>
               </div>
 
-              {/* 温度突变 */}
+              {/* Temperature Mutations */}
               <div>
                 <h4 className="text-sm font-medium text-tech-blue mb-3 flex items-center">
                   <span className="mr-2">❄️</span>
-                  温度突变 (只能选择一个)
+                  Temperature Mutations (only one can be selected)
                 </h4>
                 <div className="grid grid-cols-2 gap-3">
                   {temperatureMutations.map((mutation) => (
@@ -212,11 +218,11 @@ export const CropCalculator: React.FC = () => {
                 </div>
               </div>
 
-              {/* 环境突变 */}
+              {/* Environmental Mutations */}
               <div>
                 <h4 className="text-sm font-medium text-tech-purple mb-3 flex items-center">
                   <span className="mr-2">✨</span>
-                  环境突变 (可以选择多个)
+                  Environmental Mutations (multiple can be selected)
                 </h4>
                 <div className="grid grid-cols-3 gap-3 max-h-40 overflow-y-auto">
                   {environmentalMutations.map((mutation) => (
@@ -236,31 +242,33 @@ export const CropCalculator: React.FC = () => {
               </div>
             </div>
 
-            {/* 操作按钮 */}
+            {/* Action Buttons */}
             <div className="flex gap-4">
               <Button
                 onClick={handleCalculate}
                 type="submit"
                 className="flex-1 tech-button hover:animate-pulse-glow"
               >
-                计算价值
+                Calculate Value
               </Button>
               <Button
                 onClick={handleReset}
                 variant="outline"
                 className="border-tech-glow text-tech-glow hover:bg-tech-glow hover:text-primary-foreground transition-all duration-300"
               >
-                重置
+                Reset
               </Button>
             </div>
           </CardContent>
         </Card>
 
-        {/* 结果区域 */}
+        {/* Results Area */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">计算结果</CardTitle>
-            <CardDescription>你的作物价值分析</CardDescription>
+            <CardTitle className="text-tech-glow">
+              Calculation Results
+            </CardTitle>
+            <CardDescription>Your crop value analysis</CardDescription>
           </CardHeader>
           <CardContent>
             {result ? (
@@ -271,31 +279,33 @@ export const CropCalculator: React.FC = () => {
                   </div>
                   <div className="text-xl mb-2">Sheckles</div>
                   <div className="text-sm opacity-90">
-                    总倍数: ×{result.totalMultiplier}
+                    Total Multiplier: ×{result.totalMultiplier}
                   </div>
                 </div>
 
                 <div className="space-y-4 bg-secondary/30 rounded-lg p-4 border border-tech-glow/30">
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">基础价值:</span>
+                    <span className="text-muted-foreground">Base Value:</span>
                     <span className="font-medium text-tech-cyan">
                       {formatCurrency(result.baseValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">重量价值:</span>
+                    <span className="text-muted-foreground">Weight Value:</span>
                     <span className="font-medium text-tech-blue">
                       {formatCurrency(result.weightValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">数量价值:</span>
+                    <span className="text-muted-foreground">
+                      Quantity Value:
+                    </span>
                     <span className="font-medium text-tech-purple">
                       {formatCurrency(result.quantityValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">朋友加成:</span>
+                    <span className="text-muted-foreground">Friend Bonus:</span>
                     <span className="font-medium text-tech-orange">
                       {formatCurrency(result.friendBoostValue)}
                     </span>
@@ -306,7 +316,7 @@ export const CropCalculator: React.FC = () => {
                   <div className="bg-secondary/30 rounded-lg p-4 border border-tech-glow/30">
                     <h4 className="font-medium text-tech-glow mb-3 flex items-center">
                       <span className="mr-2">🧬</span>
-                      应用的突变:
+                      Applied Mutations:
                     </h4>
                     <div className="space-y-2">
                       {result.mutations.map((mutation) => (
@@ -329,7 +339,9 @@ export const CropCalculator: React.FC = () => {
             ) : (
               <div className="text-center text-muted-foreground py-12">
                 <div className="text-6xl mb-4">🔬</div>
-                <p className="text-lg">点击"计算价值"查看结果</p>
+                <p className="text-lg">
+                  Click &quot;Calculate Value&quot; to view results
+                </p>
               </div>
             )}
           </CardContent>

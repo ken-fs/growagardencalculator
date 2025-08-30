@@ -1,7 +1,7 @@
 import React from "react";
 
 interface JsonLdProps {
-  data: any;
+  data: Record<string, unknown>;
 }
 
 export const JsonLd: React.FC<JsonLdProps> = ({ data }) => {
@@ -13,13 +13,13 @@ export const JsonLd: React.FC<JsonLdProps> = ({ data }) => {
   );
 };
 
-// 网站结构化数据
+// Website structured data
 export const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Grow A Garden 计算器",
+  name: "Grow A Garden Calculator",
   description:
-    "专业的 Grow A Garden 游戏计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+    "Professional Grow A Garden game calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
   url: "https://growagardencalculator.net",
   potentialAction: {
     "@type": "SearchAction",
@@ -28,23 +28,23 @@ export const websiteJsonLd = {
   },
 };
 
-// 组织结构化数据
+// Organization structured data
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Grow A Garden Calculator",
   url: "https://growagardencalculator.net",
   logo: "https://growagardencalculator.net/logo.png",
-  description: "专业的 Grow A Garden 游戏计算器开发团队",
+  description: "Professional Grow A Garden game calculator development team",
 };
 
-// 工具应用结构化数据
+// Web application structured data
 export const webApplicationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Grow A Garden 计算器",
+  name: "Grow A Garden Calculator",
   description:
-    "专业的 Grow A Garden 游戏计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+    "Professional Grow A Garden game calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
   url: "https://growagardencalculator.net",
   applicationCategory: "GameApplication",
   operatingSystem: "Web Browser",

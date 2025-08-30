@@ -1,13 +1,13 @@
 import { Mutation } from "@/types";
 
 export const mutations: Mutation[] = [
-  // 生长突变
+  // Growth Mutations
   {
     id: "golden",
     name: "Golden",
     multiplier: 20,
     category: "growth",
-    description: "金色突变，增加20倍价值",
+    description: "Golden mutation, increases value by 20x",
     color: "#FFD700",
   },
   {
@@ -15,17 +15,17 @@ export const mutations: Mutation[] = [
     name: "Rainbow",
     multiplier: 50,
     category: "growth",
-    description: "彩虹突变，增加50倍价值",
+    description: "Rainbow mutation, increases value by 50x",
     color: "#FF6B6B",
   },
 
-  // 温度突变
+  // Temperature Mutations
   {
     id: "wet",
     name: "Wet",
     multiplier: 2,
     category: "temperature",
-    description: "湿润突变，增加2倍价值",
+    description: "Wet mutation, increases value by 2x",
     color: "#4ECDC4",
   },
   {
@@ -33,7 +33,7 @@ export const mutations: Mutation[] = [
     name: "Chilled",
     multiplier: 2,
     category: "temperature",
-    description: "寒冷突变，增加2倍价值",
+    description: "Cold mutation, increases value by 2x",
     color: "#45B7D1",
   },
   {
@@ -41,7 +41,7 @@ export const mutations: Mutation[] = [
     name: "Drenched",
     multiplier: 5,
     category: "temperature",
-    description: "浸泡突变，增加5倍价值",
+    description: "Drenched mutation, increases value by 5x",
     color: "#96CEB4",
   },
   {
@@ -49,17 +49,17 @@ export const mutations: Mutation[] = [
     name: "Frozen",
     multiplier: 10,
     category: "temperature",
-    description: "冰冻突变，增加10倍价值",
+    description: "Frozen mutation, increases value by 10x",
     color: "#74B9FF",
   },
 
-  // 环境突变
+  // Environmental Mutations
   {
     id: "choc",
     name: "Choc",
     multiplier: 2,
     category: "environmental",
-    description: "巧克力突变，增加2倍价值",
+    description: "Chocolate mutation, increases value by 2x",
     color: "#8B4513",
   },
   {
@@ -67,7 +67,7 @@ export const mutations: Mutation[] = [
     name: "Moonlit",
     multiplier: 2,
     category: "environmental",
-    description: "月光突变，增加2倍价值",
+    description: "Moonlit mutation, increases value by 2x",
     color: "#C0C0C0",
   },
   {
@@ -75,7 +75,7 @@ export const mutations: Mutation[] = [
     name: "Windstruck",
     multiplier: 2,
     category: "environmental",
-    description: "风击突变，增加2倍价值",
+    description: "Windstruck mutation, increases value by 2x",
     color: "#87CEEB",
   },
   {
@@ -83,7 +83,7 @@ export const mutations: Mutation[] = [
     name: "Pollinated",
     multiplier: 3,
     category: "environmental",
-    description: "授粉突变，增加3倍价值",
+    description: "Pollinated mutation, increases value by 3x",
     color: "#FFB6C1",
   },
   {
@@ -91,7 +91,7 @@ export const mutations: Mutation[] = [
     name: "Sandy",
     multiplier: 3,
     category: "environmental",
-    description: "沙质突变，增加3倍价值",
+    description: "Sandy mutation, increases value by 3x",
     color: "#F4A460",
   },
   {
@@ -99,7 +99,7 @@ export const mutations: Mutation[] = [
     name: "Sauce",
     multiplier: 3,
     category: "environmental",
-    description: "酱汁突变，增加3倍价值",
+    description: "Saucy mutation, increases value by 3x",
     color: "#DC143C",
   },
   {
@@ -107,7 +107,7 @@ export const mutations: Mutation[] = [
     name: "Pasta",
     multiplier: 3,
     category: "environmental",
-    description: "意大利面突变，增加3倍价值",
+    description: "Spaghetti mutation, increases value by 3x",
     color: "#FFE4B5",
   },
   {
@@ -115,7 +115,7 @@ export const mutations: Mutation[] = [
     name: "Meatball",
     multiplier: 3,
     category: "environmental",
-    description: "肉丸突变，增加3倍价值",
+    description: "Meatball mutation, increases value by 3x",
     color: "#8B0000",
   },
   {
@@ -123,7 +123,7 @@ export const mutations: Mutation[] = [
     name: "Bloodlit",
     multiplier: 4,
     category: "environmental",
-    description: "血光突变，增加4倍价值",
+    description: "Bloody mutation, increases value by 4x",
     color: "#8B0000",
   },
   {
@@ -131,7 +131,7 @@ export const mutations: Mutation[] = [
     name: "Burnt",
     multiplier: 4,
     category: "environmental",
-    description: "燃烧突变，增加4倍价值",
+    description: "Burning mutation, increases value by 4x",
     color: "#2F2F2F",
   },
   {
@@ -139,7 +139,7 @@ export const mutations: Mutation[] = [
     name: "Verdant",
     multiplier: 4,
     category: "environmental",
-    description: "翠绿突变，增加4倍价值",
+    description: "Emerald mutation, increases value by 4x",
     color: "#228B22",
   },
   {
@@ -147,7 +147,7 @@ export const mutations: Mutation[] = [
     name: "Wiltproof",
     multiplier: 4,
     category: "environmental",
-    description: "抗枯萎突变，增加4倍价值",
+    description: "Wilt-resistant mutation, increases value by 4x",
     color: "#32CD32",
   },
   {
@@ -155,7 +155,7 @@ export const mutations: Mutation[] = [
     name: "Plasma",
     multiplier: 5,
     category: "environmental",
-    description: "等离子突变，增加5倍价值",
+    description: "Plasma mutation, increases value by 5x",
     color: "#FF1493",
   },
   {
@@ -163,7 +163,7 @@ export const mutations: Mutation[] = [
     name: "HoneyGlazed",
     multiplier: 5,
     category: "environmental",
-    description: "蜂蜜釉突变，增加5倍价值",
+    description: "Honey-glazed mutation, increases value by 5x",
     color: "#FFD700",
   },
   {
@@ -171,7 +171,7 @@ export const mutations: Mutation[] = [
     name: "Heavenly",
     multiplier: 5,
     category: "environmental",
-    description: "天堂突变，增加5倍价值",
+    description: "Heavenly mutation, increases value by 5x",
     color: "#87CEEB",
   },
   {
@@ -179,7 +179,7 @@ export const mutations: Mutation[] = [
     name: "Twisted",
     multiplier: 5,
     category: "environmental",
-    description: "扭曲突变，增加5倍价值",
+    description: "Warped mutation, increases value by 5x",
     color: "#9370DB",
   },
   {
@@ -187,7 +187,7 @@ export const mutations: Mutation[] = [
     name: "Cloudtouched",
     multiplier: 5,
     category: "environmental",
-    description: "云触突变，增加5倍价值",
+    description: "Cloudtouched mutation, increases value by 5x",
     color: "#F0F8FF",
   },
   {
@@ -195,7 +195,7 @@ export const mutations: Mutation[] = [
     name: "Clay",
     multiplier: 5,
     category: "environmental",
-    description: "粘土突变，增加5倍价值",
+    description: "Clay mutation, increases value by 5x",
     color: "#CD853F",
   },
   {
@@ -203,7 +203,7 @@ export const mutations: Mutation[] = [
     name: "Silver",
     multiplier: 5,
     category: "environmental",
-    description: "银色突变，增加5倍价值",
+    description: "Silver mutation, increases value by 5x",
     color: "#C0C0C0",
   },
   {
@@ -211,7 +211,7 @@ export const mutations: Mutation[] = [
     name: "Fried",
     multiplier: 8,
     category: "environmental",
-    description: "油炸突变，增加8倍价值",
+    description: "Fried mutation, increases value by 8x",
     color: "#DAA520",
   },
   {
@@ -219,7 +219,7 @@ export const mutations: Mutation[] = [
     name: "Static",
     multiplier: 8,
     category: "environmental",
-    description: "静电突变，增加8倍价值",
+    description: "Static mutation, increases value by 8x",
     color: "#FFD700",
   },
   {
@@ -227,7 +227,7 @@ export const mutations: Mutation[] = [
     name: "Bloom",
     multiplier: 8,
     category: "environmental",
-    description: "绽放突变，增加8倍价值",
+    description: "Bloom mutation, increases value by 8x",
     color: "#FF69B4",
   },
   {
@@ -235,7 +235,7 @@ export const mutations: Mutation[] = [
     name: "Rot",
     multiplier: 8,
     category: "environmental",
-    description: "腐烂突变，增加8倍价值",
+    description: "Rot mutation, increases value by 8x",
     color: "#8B4513",
   },
   {
@@ -243,7 +243,7 @@ export const mutations: Mutation[] = [
     name: "Cooked",
     multiplier: 10,
     category: "environmental",
-    description: "烹饪突变，增加10倍价值",
+    description: "Cooked mutation, increases value by 10x",
     color: "#D2691E",
   },
   {
@@ -251,7 +251,7 @@ export const mutations: Mutation[] = [
     name: "Amber",
     multiplier: 10,
     category: "environmental",
-    description: "琥珀突变，增加10倍价值",
+    description: "Amber mutation, increases value by 10x",
     color: "#FFBF00",
   },
   {
@@ -259,7 +259,7 @@ export const mutations: Mutation[] = [
     name: "Tempestuous",
     multiplier: 12,
     category: "environmental",
-    description: "暴风雨突变，增加12倍价值",
+    description: "Tempestuous mutation, increases value by 12x",
     color: "#4682B4",
   },
   {
@@ -267,7 +267,7 @@ export const mutations: Mutation[] = [
     name: "Toxic",
     multiplier: 12,
     category: "environmental",
-    description: "毒性突变，增加12倍价值",
+    description: "Toxic mutation, increases value by 12x",
     color: "#32CD32",
   },
   {
@@ -283,7 +283,7 @@ export const mutations: Mutation[] = [
     name: "Chakra",
     multiplier: 15,
     category: "environmental",
-    description: "脉轮突变，增加15倍价值",
+    description: "Chakra mutation, increases value by 15x",
     color: "#9370DB",
   },
   {
@@ -291,7 +291,7 @@ export const mutations: Mutation[] = [
     name: "Jackpot",
     multiplier: 15,
     category: "environmental",
-    description: "头奖突变，增加15倍价值",
+    description: "Jackpot mutation, increases value by 15x",
     color: "#FFD700",
   },
   {
@@ -299,7 +299,7 @@ export const mutations: Mutation[] = [
     name: "Acidic",
     multiplier: 15,
     category: "environmental",
-    description: "酸性突变，增加15倍价值",
+    description: "Acidic mutation, increases value by 15x",
     color: "#32CD32",
   },
   {
@@ -307,7 +307,7 @@ export const mutations: Mutation[] = [
     name: "Aromatic",
     multiplier: 15,
     category: "environmental",
-    description: "芳香突变，增加15倍价值",
+    description: "Aromatic mutation, increases value by 15x",
     color: "#FF69B4",
   },
   {
@@ -315,7 +315,7 @@ export const mutations: Mutation[] = [
     name: "Oil",
     multiplier: 15,
     category: "environmental",
-    description: "油性突变，增加15倍价值",
+    description: "Oil mutation, increases value by 15x",
     color: "#2F2F2F",
   },
   {
@@ -323,7 +323,7 @@ export const mutations: Mutation[] = [
     name: "Boil",
     multiplier: 15,
     category: "environmental",
-    description: "沸腾突变，增加15倍价值",
+    description: "Boil mutation, increases value by 15x",
     color: "#FF4500",
   },
   {
@@ -331,7 +331,7 @@ export const mutations: Mutation[] = [
     name: "Gnomed",
     multiplier: 15,
     category: "environmental",
-    description: "侏儒突变，增加15倍价值",
+    description: "Gnomed mutation, increases value by 15x",
     color: "#228B22",
   },
   {
@@ -339,7 +339,7 @@ export const mutations: Mutation[] = [
     name: "OldAmber",
     multiplier: 20,
     category: "environmental",
-    description: "古琥珀突变，增加20倍价值",
+    description: "OldAmber mutation, increases value by 20x",
     color: "#CD853F",
   },
   {
@@ -347,7 +347,7 @@ export const mutations: Mutation[] = [
     name: "Tranquil",
     multiplier: 20,
     category: "environmental",
-    description: "宁静突变，增加20倍价值",
+    description: "Tranquil mutation, increases value by 20x",
     color: "#87CEEB",
   },
   {
@@ -355,7 +355,7 @@ export const mutations: Mutation[] = [
     name: "Corrupt",
     multiplier: 20,
     category: "environmental",
-    description: "腐败突变，增加20倍价值",
+    description: "Corrupt mutation, increases value by 20x",
     color: "#8B0000",
   },
   {
@@ -363,7 +363,7 @@ export const mutations: Mutation[] = [
     name: "Eclipsed",
     multiplier: 20,
     category: "environmental",
-    description: "日食突变，增加20倍价值",
+    description: "Eclipsed mutation, increases value by 20x",
     color: "#2F2F2F",
   },
   {
@@ -371,7 +371,7 @@ export const mutations: Mutation[] = [
     name: "Zombified",
     multiplier: 25,
     category: "environmental",
-    description: "僵尸突变，增加25倍价值",
+    description: "Zombified mutation, increases value by 25x",
     color: "#32CD32",
   },
   {
@@ -379,7 +379,7 @@ export const mutations: Mutation[] = [
     name: "Molten",
     multiplier: 25,
     category: "environmental",
-    description: "熔岩突变，增加25倍价值",
+    description: "Molten mutation, increases value by 25x",
     color: "#FF4500",
   },
   {
@@ -387,7 +387,7 @@ export const mutations: Mutation[] = [
     name: "Ceramic",
     multiplier: 30,
     category: "environmental",
-    description: "陶瓷突变，增加30倍价值",
+    description: "Ceramic mutation, increases value by 30x",
     color: "#F5F5DC",
   },
   {
@@ -395,7 +395,7 @@ export const mutations: Mutation[] = [
     name: "Gloom",
     multiplier: 30,
     category: "environmental",
-    description: "忧郁突变，增加30倍价值",
+    description: "Gloom mutation, increases value by 30x",
     color: "#2F2F2F",
   },
   {
@@ -403,7 +403,7 @@ export const mutations: Mutation[] = [
     name: "HarmonisedChakra",
     multiplier: 35,
     category: "environmental",
-    description: "和谐脉轮突变，增加35倍价值",
+    description: "HarmonisedChakra mutation, increases value by 35x",
     color: "#9370DB",
   },
   {
@@ -411,7 +411,7 @@ export const mutations: Mutation[] = [
     name: "Subzero",
     multiplier: 40,
     category: "environmental",
-    description: "零下突变，增加40倍价值",
+    description: "Subzero mutation, increases value by 40x",
     color: "#00BFFF",
   },
   {
@@ -419,7 +419,7 @@ export const mutations: Mutation[] = [
     name: "Junkshock",
     multiplier: 45,
     category: "environmental",
-    description: "垃圾冲击突变，增加45倍价值",
+    description: "Junkshock mutation, increases value by 45x",
     color: "#FFD700",
   },
   {
@@ -427,7 +427,7 @@ export const mutations: Mutation[] = [
     name: "AncientAmber",
     multiplier: 50,
     category: "environmental",
-    description: "古琥珀突变，增加50倍价值",
+    description: "AncientAmber mutation, increases value by 50x",
     color: "#CD853F",
   },
   {
@@ -435,7 +435,7 @@ export const mutations: Mutation[] = [
     name: "Blitzshock",
     multiplier: 50,
     category: "environmental",
-    description: "闪电冲击突变，增加50倍价值",
+    description: "Blitzshock mutation, increases value by 50x",
     color: "#FFD700",
   },
   {
@@ -443,7 +443,7 @@ export const mutations: Mutation[] = [
     name: "Sliced",
     multiplier: 50,
     category: "environmental",
-    description: "切片突变，增加50倍价值",
+    description: "Sliced mutation, increases value by 50x",
     color: "#FF69B4",
   },
   {
@@ -451,7 +451,7 @@ export const mutations: Mutation[] = [
     name: "Fortune",
     multiplier: 50,
     category: "environmental",
-    description: "幸运突变，增加50倍价值",
+    description: "Fortune mutation, increases value by 50x",
     color: "#FFD700",
   },
   {
@@ -459,7 +459,7 @@ export const mutations: Mutation[] = [
     name: "Lightcycle",
     multiplier: 50,
     category: "environmental",
-    description: "光循环突变，增加50倍价值",
+    description: "Lightcycle mutation, increases value by 50x",
     color: "#00BFFF",
   },
   {
@@ -467,7 +467,7 @@ export const mutations: Mutation[] = [
     name: "Cyclonic",
     multiplier: 50,
     category: "environmental",
-    description: "旋风突变，增加50倍价值",
+    description: "Cyclonic mutation, increases value by 50x",
     color: "#4682B4",
   },
   {
@@ -475,7 +475,7 @@ export const mutations: Mutation[] = [
     name: "Friendbound",
     multiplier: 70,
     category: "environmental",
-    description: "朋友绑定突变，增加70倍价值",
+    description: "Friendbound mutation, increases value by 70x",
     color: "#FF69B4",
   },
   {
@@ -483,7 +483,7 @@ export const mutations: Mutation[] = [
     name: "Infected",
     multiplier: 75,
     category: "environmental",
-    description: "感染突变，增加75倍价值",
+    description: "Infected mutation, increases value by 75x",
     color: "#32CD32",
   },
   {
@@ -491,7 +491,7 @@ export const mutations: Mutation[] = [
     name: "Warped",
     multiplier: 75,
     category: "environmental",
-    description: "扭曲突变，增加75倍价值",
+    description: "Warped mutation, increases value by 75x",
     color: "#9370DB",
   },
   {
@@ -499,7 +499,7 @@ export const mutations: Mutation[] = [
     name: "Radioactive",
     multiplier: 80,
     category: "environmental",
-    description: "放射性突变，增加80倍价值",
+    description: "Radioactive mutation, increases value by 80x",
     color: "#32CD32",
   },
   {
@@ -507,7 +507,7 @@ export const mutations: Mutation[] = [
     name: "Sundried",
     multiplier: 85,
     category: "environmental",
-    description: "晒干突变，增加85倍价值",
+    description: "Sun-dried mutation, increases value by 85x",
     color: "#DAA520",
   },
   {
@@ -515,7 +515,7 @@ export const mutations: Mutation[] = [
     name: "Aurora",
     multiplier: 90,
     category: "environmental",
-    description: "极光突变，增加90倍价值",
+    description: "Aurora mutation, increases value by 90x",
     color: "#00BFFF",
   },
   {
@@ -523,7 +523,7 @@ export const mutations: Mutation[] = [
     name: "Foxfire",
     multiplier: 90,
     category: "environmental",
-    description: "狐火突变，增加90倍价值",
+    description: "Foxfire mutation, increases value by 90x",
     color: "#FF4500",
   },
   {
@@ -531,7 +531,7 @@ export const mutations: Mutation[] = [
     name: "Shocked",
     multiplier: 100,
     category: "environmental",
-    description: "震惊突变，增加100倍价值",
+    description: "Shocked mutation, increases value by 100x",
     color: "#FFD700",
   },
   {
@@ -539,7 +539,7 @@ export const mutations: Mutation[] = [
     name: "Paradisal",
     multiplier: 100,
     category: "environmental",
-    description: "天堂突变，增加100倍价值",
+    description: "Heavenly mutation, increases value by 100x",
     color: "#87CEEB",
   },
   {
@@ -547,7 +547,7 @@ export const mutations: Mutation[] = [
     name: "Alienlike",
     multiplier: 100,
     category: "environmental",
-    description: "外星突变，增加100倍价值",
+    description: "Alien mutation, increases value by 100x",
     color: "#32CD32",
   },
   {
@@ -555,7 +555,7 @@ export const mutations: Mutation[] = [
     name: "Brainrot",
     multiplier: 100,
     category: "environmental",
-    description: "脑腐突变，增加100倍价值",
+    description: "Brainrot mutation, increases value by 100x",
     color: "#8B0000",
   },
   {
@@ -563,7 +563,7 @@ export const mutations: Mutation[] = [
     name: "Beanbound",
     multiplier: 100,
     category: "environmental",
-    description: "豆绑定突变，增加100倍价值",
+    description: "Beanbound mutation, increases value by 100x",
     color: "#228B22",
   },
   {
@@ -571,7 +571,7 @@ export const mutations: Mutation[] = [
     name: "Maelstrom",
     multiplier: 100,
     category: "environmental",
-    description: "漩涡突变，增加100倍价值",
+    description: "Whirlpool mutation, increases value by 100x",
     color: "#4682B4",
   },
   {
@@ -579,7 +579,7 @@ export const mutations: Mutation[] = [
     name: "Touchdown",
     multiplier: 105,
     category: "environmental",
-    description: "触地突变，增加105倍价值",
+    description: "Touchdown mutation, increases value by 105x",
     color: "#FFD700",
   },
   {
@@ -587,7 +587,7 @@ export const mutations: Mutation[] = [
     name: "Celestial",
     multiplier: 120,
     category: "environmental",
-    description: "天体突变，增加120倍价值",
+    description: "Celestial mutation, increases value by 120x",
     color: "#87CEEB",
   },
   {
@@ -595,7 +595,7 @@ export const mutations: Mutation[] = [
     name: "Galactic",
     multiplier: 120,
     category: "environmental",
-    description: "银河突变，增加120倍价值",
+    description: "Galactic mutation, increases value by 120x",
     color: "#9370DB",
   },
   {
@@ -603,7 +603,7 @@ export const mutations: Mutation[] = [
     name: "Disco",
     multiplier: 125,
     category: "environmental",
-    description: "迪斯科突变，增加125倍价值",
+    description: "Disco mutation, increases value by 125x",
     color: "#FF69B4",
   },
   {
@@ -611,7 +611,7 @@ export const mutations: Mutation[] = [
     name: "Meteoric",
     multiplier: 125,
     category: "environmental",
-    description: "流星突变，增加125倍价值",
+    description: "Meteor mutation, increases value by 125x",
     color: "#FF4500",
   },
   {
@@ -619,7 +619,7 @@ export const mutations: Mutation[] = [
     name: "Voidtouched",
     multiplier: 135,
     category: "environmental",
-    description: "虚空触摸突变，增加135倍价值",
+    description: "Voidtouch mutation, increases value by 135x",
     color: "#2F2F2F",
   },
   {
@@ -627,7 +627,7 @@ export const mutations: Mutation[] = [
     name: "Dawnbound",
     multiplier: 150,
     category: "environmental",
-    description: "黎明绑定突变，增加150倍价值",
+    description: "Dawnbound mutation, increases value by 150x",
     color: "#FFD700",
   },
   {
@@ -635,7 +635,7 @@ export const mutations: Mutation[] = [
     name: "HarmonisedFoxfire",
     multiplier: 190,
     category: "environmental",
-    description: "和谐狐火突变，增加190倍价值",
+    description: "HarmonisedFoxfire mutation, increases value by 190x",
     color: "#FF4500",
   },
 ];

@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Grow A Garden 计算器",
-    short_name: "GAG 计算器",
+    name: "Grow A Garden Calculator",
+    short_name: "GAG Calculator",
     description:
-      "专业的 Grow A Garden 游戏计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+      "Professional Grow A Garden game calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

@@ -11,9 +11,9 @@ import {
 import { formatCurrency } from "@/utils/calculator";
 
 export const metadata = {
-  title: "装备百科 - Grow A Garden 计算器",
+  title: "Gear Wiki - Grow A Garden Calculator",
   description:
-    "完整的 Grow A Garden 装备信息大全，包含所有装备类型、价值和稀有度。",
+    "Complete Grow A Garden gear information guide, including all gear types, values and rarities.",
 };
 
 export default function GearsPage() {
@@ -42,23 +42,23 @@ export default function GearsPage() {
   const getRarityText = (rarity: string) => {
     switch (rarity) {
       case "common":
-        return "普通";
+        return "Common";
       case "uncommon":
-        return "不常见";
+        return "Uncommon";
       case "rare":
-        return "稀有";
+        return "Rare";
       case "epic":
-        return "史诗";
+        return "Epic";
       case "legendary":
-        return "传说";
+        return "Legendary";
       default:
-        return "未知";
+        return "Unknown";
     }
   };
 
   return (
     <div className="min-h-screen tech-dark-gradient relative">
-      {/* 科技背景效果 */}
+      {/* Tech background effect */}
       <div className="matrix-bg"></div>
       <Navigation />
       <main className="max-w-7xl mx-auto p-6 relative z-10">

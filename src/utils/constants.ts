@@ -1,27 +1,27 @@
-// 应用常量
+// Application constants
 export const APP_CONFIG = {
-  name: "Grow A Garden 计算器",
-  shortName: "GAG 计算器",
+  name: "Grow A Garden Calculator",
+  shortName: "GAG Calculator",
   description:
-    "专业的 Grow A Garden 游戏计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+    "Professional Grow A Garden game calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
   url: "https://growagardencalculator.net",
   version: "1.0.0",
   author: "Grow A Garden Calculator Team",
   keywords: [
     "Grow A Garden",
-    "计算器",
+    "Calculator",
     "Roblox",
-    "农场游戏",
-    "作物价值",
-    "突变计算",
-    "宠物重量",
-    "交易分析",
+    "Farm Game",
+    "Crop Value",
+    "Mutation Calculator",
+    "Pet Weight",
+    "Trade Analysis",
     "WFL",
     "Sheckles",
   ],
 } as const;
 
-// 游戏相关常量
+// Game related constants
 export const GAME_CONSTANTS = {
   currency: "Sheckles",
   maxWeight: 1000,

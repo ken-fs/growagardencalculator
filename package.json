@@ -2,7 +2,7 @@
   "name": "growagardencalculator",
   "version": "1.0.0",
   "private": true,
-  "description": "专业的 Grow A Garden 游戏计算器，支持作物价值计算、突变分析、宠物重量计算、交易分析等功能。",
+  "description": "Professional Grow A Garden game calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
   "keywords": [
     "grow-a-garden",
     "calculator",
