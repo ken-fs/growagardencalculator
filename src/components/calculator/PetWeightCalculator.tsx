@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { PetSelector } from "@/components/ui/PetSelector";
 import { pets } from "@/data/pets";
 import { formatCurrency } from "@/utils/calculator";
 
@@ -66,17 +67,12 @@ export const PetWeightCalculator: React.FC = () => {
               <label className="block text-sm font-medium text-tech-glow mb-3">
                 选择宠物
               </label>
-              <select
+              <PetSelector
+                pets={pets}
                 value={selectedPet}
-                onChange={(e) => handlePetChange(e.target.value)}
-                className="w-full p-3 tech-input rounded-lg focus:ring-2 focus:ring-tech-glow focus:border-transparent text-foreground"
-              >
-                {pets.map((pet) => (
-                  <option key={pet.id} value={pet.id}>
-                    {pet.name} - {formatCurrency(pet.baseValue)} Sheckles
-                  </option>
-                ))}
-              </select>
+                onChange={handlePetChange}
+                className="w-full"
+              />
             </div>
 
             <div>

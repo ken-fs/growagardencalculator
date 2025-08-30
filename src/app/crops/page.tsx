@@ -89,10 +89,20 @@ export default function CropsPage() {
                   key={crop.id}
                   className="p-4 border border-border rounded-lg hover:shadow-tech-glow transition-all duration-300 bg-secondary/30 hover:bg-secondary/50"
                 >
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-foreground">
-                      {crop.name}
-                    </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img
+                      src={crop.image}
+                      alt={crop.name}
+                      className="w-8 h-8 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.src = "/crops/default.svg";
+                      }}
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-foreground">
+                        {crop.name}
+                      </h3>
+                    </div>
                     <span className="text-lg font-bold text-tech-glow">
                       {formatCurrency(crop.baseValue)}
                     </span>
@@ -130,10 +140,20 @@ export default function CropsPage() {
                   key={crop.id}
                   className="p-4 border border-border rounded-lg hover:shadow-tech-glow transition-all duration-300 bg-secondary/30 hover:bg-secondary/50"
                 >
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-foreground">
-                      {crop.name}
-                    </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img
+                      src={crop.image}
+                      alt={crop.name}
+                      className="w-8 h-8 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.src = "/crops/default.svg";
+                      }}
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-foreground">
+                        {crop.name}
+                      </h3>
+                    </div>
                     <span className="text-lg font-bold text-tech-glow">
                       {formatCurrency(crop.baseValue)}
                     </span>
@@ -171,10 +191,20 @@ export default function CropsPage() {
                   key={crop.id}
                   className="p-4 border border-border rounded-lg hover:shadow-tech-glow transition-all duration-300 bg-secondary/30 hover:bg-secondary/50"
                 >
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-foreground">
-                      {crop.name}
-                    </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img
+                      src={crop.image}
+                      alt={crop.name}
+                      className="w-8 h-8 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.src = "/crops/default.svg";
+                      }}
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-foreground">
+                        {crop.name}
+                      </h3>
+                    </div>
                     <span className="text-lg font-bold text-tech-glow">
                       {formatCurrency(crop.baseValue)}
                     </span>
@@ -212,10 +242,20 @@ export default function CropsPage() {
                   key={crop.id}
                   className="p-4 border border-border rounded-lg hover:shadow-tech-glow transition-all duration-300 bg-secondary/30 hover:bg-secondary/50"
                 >
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-foreground">
-                      {crop.name}
-                    </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img
+                      src={crop.image}
+                      alt={crop.name}
+                      className="w-8 h-8 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.src = "/crops/default.svg";
+                      }}
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-foreground">
+                        {crop.name}
+                      </h3>
+                    </div>
                     <span className="text-lg font-bold text-tech-glow">
                       {formatCurrency(crop.baseValue)}
                     </span>

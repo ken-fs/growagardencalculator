@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { CropSelector } from "@/components/ui/CropSelector";
 import { crops } from "@/data/crops";
 import { mutations } from "@/data/mutations";
 import { calculateCropValue, formatCurrency } from "@/utils/calculator";
@@ -108,17 +109,12 @@ export const CropCalculator: React.FC = () => {
               <label className="block text-sm font-medium text-tech-glow mb-3">
                 选择作物
               </label>
-              <select
+              <CropSelector
+                crops={crops}
                 value={input.cropId}
-                onChange={(e) => handleCropChange(e.target.value)}
-                className="w-full p-3 tech-input rounded-lg focus:ring-2 focus:ring-tech-glow focus:border-transparent text-foreground"
-              >
-                {crops.map((crop) => (
-                  <option key={crop.id} value={crop.id}>
-                    {crop.name} - {formatCurrency(crop.baseValue)} Sheckles
-                  </option>
-                ))}
-              </select>
+                onChange={handleCropChange}
+                className="w-full"
+              />
             </div>
 
             {/* 基础参数 */}
