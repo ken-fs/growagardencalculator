@@ -20,20 +20,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Grow A Garden Calculator - Professional Roblox Farm Game Calculator",
+  title: "Grow A Garden Calculator - Free Roblox Farm Game Tool 2024",
   description:
-    "Professional Grow A Garden calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more. Help players optimize farm profits and analyze trade values.",
+    "Best free Grow A Garden calculator for Roblox! Calculate crop values, pet weights, mutations, and analyze trades. Get the most sheckles with our professional farming calculator.",
   keywords: [
-    "Grow A Garden",
-    "Calculator",
-    "Roblox",
-    "Farm Game",
-    "Crop Value",
-    "Mutation Calculator",
-    "Pet Weight",
-    "Trade Analysis",
-    "WFL",
-    "Sheckles",
+    "grow a garden calculator",
+    "roblox grow a garden",
+    "grow a garden sheckles calculator",
+    "roblox farm game calculator",
+    "grow a garden crop value",
+    "grow a garden pet calculator",
+    "grow a garden mutations",
+    "grow a garden trade analyzer",
+    "roblox farming simulator",
+    "grow a garden guide",
+    "roblox calculator",
+    "free roblox tools",
+    "grow a garden wfl",
+    "roblox farm game",
+    "grow a garden wiki",
   ],
   authors: [{ name: "Grow A Garden Calculator" }],
   creator: "Grow A Garden Calculator",
@@ -48,10 +53,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title:
-      "Grow A Garden Calculator - Professional Roblox Farm Game Calculator",
+    title: "Grow A Garden Calculator - Free Roblox Farm Game Tool 2024",
     description:
-      "Professional Grow A Garden calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
+      "Best free Grow A Garden calculator for Roblox! Calculate crop values, pet weights, mutations, and analyze trades. Get the most sheckles with our professional farming calculator.",
     url: "https://growagardencalculator.net",
     siteName: "Grow A Garden Calculator",
     images: [
@@ -67,10 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Grow A Garden Calculator - Professional Roblox Farm Game Calculator",
+    title: "Grow A Garden Calculator - Free Roblox Farm Game Tool 2024",
     description:
-      "Professional Grow A Garden calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
+      "Best free Grow A Garden calculator for Roblox! Calculate crop values, pet weights, mutations, and analyze trades. Get the most sheckles with our professional farming calculator.",
     images: ["/og-image.png"],
   },
   robots: {

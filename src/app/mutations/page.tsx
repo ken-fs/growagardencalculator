@@ -10,9 +10,22 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Mutation Wiki - Grow A Garden Calculator",
+  title:
+    "Grow A Garden Mutation Wiki - Complete Mutation Guide & Multipliers 2024",
   description:
-    "Complete Grow A Garden mutation information guide, including all mutation types, multipliers and acquisition methods.",
+    "Complete Grow A Garden mutation guide for Roblox! Learn all mutation types, multipliers, and combinations. Maximize your crop values with the best mutation strategies.",
+  keywords: [
+    "grow a garden mutations",
+    "grow a garden mutation guide",
+    "grow a garden mutation wiki",
+    "roblox grow a garden mutations",
+    "grow a garden growth mutations",
+    "grow a garden temperature mutations",
+    "grow a garden environmental mutations",
+    "grow a garden mutation multipliers",
+    "roblox farming mutations",
+    "grow a garden mutation combinations",
+  ],
 };
 
 export default function MutationsPage() {

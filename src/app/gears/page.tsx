@@ -11,9 +11,21 @@ import {
 import { formatCurrency } from "@/utils/calculator";
 
 export const metadata = {
-  title: "Gear Wiki - Grow A Garden Calculator",
+  title: "Grow A Garden Gear Wiki - Complete Equipment Guide & Values 2024",
   description:
-    "Complete Grow A Garden gear information guide, including all gear types, values and rarities.",
+    "Complete Grow A Garden gear database for Roblox! Find all equipment types, values, and usage tips. Optimize your farm with the best gear combinations.",
+  keywords: [
+    "grow a garden gear wiki",
+    "grow a garden equipment",
+    "grow a garden gear values",
+    "roblox grow a garden gear",
+    "grow a garden sprinklers",
+    "grow a garden fertilizers",
+    "grow a garden tools",
+    "grow a garden decorations",
+    "roblox farming equipment",
+    "grow a garden gear guide",
+  ],
 };
 
 export default function GearsPage() {

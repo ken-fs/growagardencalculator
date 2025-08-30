@@ -11,9 +11,21 @@ import {
 import { formatCurrency } from "@/utils/calculator";
 
 export const metadata = {
-  title: "Pet Wiki - Grow A Garden Calculator",
+  title: "Grow A Garden Pet Wiki - Complete Pet Database & Values 2024",
   description:
-    "Complete Grow A Garden pet information guide, including all pet types, values and rarities.",
+    "Complete Grow A Garden pet database for Roblox! Find all pet types, values, rarities, and acquisition tips. Build the ultimate pet collection in Grow A Garden.",
+  keywords: [
+    "grow a garden pet wiki",
+    "grow a garden pets database",
+    "grow a garden pet values",
+    "roblox grow a garden pets",
+    "grow a garden farm pets",
+    "grow a garden wild pets",
+    "grow a garden special pets",
+    "grow a garden pet rarities",
+    "roblox pet database",
+    "grow a garden pet guide",
+  ],
 };
 
 export default function PetsWikiPage() {

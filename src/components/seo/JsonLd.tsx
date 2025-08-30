@@ -19,13 +19,16 @@ export const websiteJsonLd = {
   "@type": "WebSite",
   name: "Grow A Garden Calculator",
   description:
-    "Professional Grow A Garden game calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
+    "Best free Grow A Garden calculator for Roblox! Calculate crop values, pet weights, mutations, and analyze trades. Get the most sheckles with our professional farming calculator.",
   url: "https://growagardencalculator.net",
   potentialAction: {
     "@type": "SearchAction",
     target: "https://growagardencalculator.net/search?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
+  keywords:
+    "grow a garden calculator, roblox grow a garden, roblox farm game calculator, grow a garden sheckles, roblox farming simulator",
+  inLanguage: "en-US",
 };
 
 // Organization structured data
@@ -44,13 +47,23 @@ export const webApplicationJsonLd = {
   "@type": "WebApplication",
   name: "Grow A Garden Calculator",
   description:
-    "Professional Grow A Garden game calculator supporting crop value calculation, mutation analysis, pet weight calculation, trade analysis and more.",
+    "Best free Grow A Garden calculator for Roblox! Calculate crop values, pet weights, mutations, and analyze trades. Get the most sheckles with our professional farming calculator.",
   url: "https://growagardencalculator.net",
   applicationCategory: "GameApplication",
   operatingSystem: "Web Browser",
+  browserRequirements: "Requires JavaScript. Requires HTML5.",
+  softwareVersion: "2024",
   offers: {
     "@type": "Offer",
     price: "0",
     priceCurrency: "USD",
   },
+  featureList: [
+    "Crop Value Calculator",
+    "Pet Weight Calculator",
+    "Mutation Analysis",
+    "Trade Analyzer (WFL)",
+    "Complete Game Database",
+    "Free to Use",
+  ],
 };
