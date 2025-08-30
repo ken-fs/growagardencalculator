@@ -20,7 +20,7 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const navItems = [
     { title: "Calculator", href: "/", description: "Crop value calculation" },
     {
-      title: "Pet Calculator",
+      title: "Pet",
       href: "/pets",
       description: "Pet weight and value calculation",
     },
@@ -40,6 +40,11 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
       title: "Trade Analysis",
       href: "/trade",
       description: "WFL trade analysis",
+    },
+    {
+      title: "Blog",
+      href: "/blog",
+      description: "Expert farming guides",
     },
   ];
 

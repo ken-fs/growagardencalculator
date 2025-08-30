@@ -28,16 +28,16 @@ export const calculateCropValue = (
     }
   }
 
-  // 计算朋友加成
+  // Calculate friend boost value
   const friendBoostValue = (input.friendBoost / 100) * baseValue;
 
-  // 计算重量价值
+  // Calculate weight value
   const weightValue = baseValue * input.weight;
 
-  // 计算数量价值
+  // Calculate quantity value
   const quantityValue = weightValue * input.quantity;
 
-  // 计算总价值
+  // Calculate total value
   const totalValue = quantityValue * totalMultiplier + friendBoostValue;
 
   return {
@@ -52,7 +52,7 @@ export const calculateCropValue = (
 };
 
 /**
- * 格式化数字为货币格式
+ * Format number as currency
  */
 export const formatCurrency = (value: number): string => {
   if (value >= 1000000) {
@@ -65,25 +65,25 @@ export const formatCurrency = (value: number): string => {
 };
 
 /**
- * 格式化数字为完整格式
+ * Format number as full format
  */
 export const formatFullNumber = (value: number): string => {
   return value.toLocaleString("en-US");
 };
 
 /**
- * 计算突变组合的最大可能倍数
+ * Calculate maximum possible multiplier for mutation combinations
  */
 export const getMaxPossibleMultiplier = (): number => {
-  // 生长突变只能选择一个
+  // Only one growth mutation can be selected
   const growthMutations = [20, 50]; // Golden, Rainbow
   const maxGrowth = Math.max(...growthMutations);
 
-  // 温度突变只能选择一个
+  // Only one temperature mutation can be selected
   const temperatureMutations = [2, 2, 5, 10]; // Wet, Chilled, Drenched, Frozen
   const maxTemperature = Math.max(...temperatureMutations);
 
-  // 环境突变可以选择多个
+  // Multiple environmental mutations can be selected
   const environmentalMutations = [
     2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 8, 8, 8, 8, 10, 10, 12,
     12, 12, 15, 15, 15, 15, 15, 15, 15, 20, 20, 20, 20, 25, 25, 30, 30, 35, 40,
@@ -91,16 +91,16 @@ export const getMaxPossibleMultiplier = (): number => {
     100, 100, 105, 120, 120, 125, 125, 135, 150, 190,
   ];
 
-  // 选择最高的几个环境突变
+  // Select the highest environmental mutations
   const sortedEnvironmental = environmentalMutations.sort((a, b) => b - a);
-  const topEnvironmental = sortedEnvironmental.slice(0, 5); // 假设最多可以选择5个环境突变
+  const topEnvironmental = sortedEnvironmental.slice(0, 5); // Assume maximum 5 environmental mutations can be selected
   const maxEnvironmental = topEnvironmental.reduce((acc, val) => acc * val, 1);
 
   return maxGrowth * maxTemperature * maxEnvironmental;
 };
 
 /**
- * 验证突变组合是否有效
+ * Validate if mutation combination is valid
  */
 export const validateMutationCombination = (
   mutations: string[]
@@ -115,26 +115,32 @@ export const validateMutationCombination = (
     return mutation?.category === "temperature";
   });
 
-  // 生长突变只能选择一个
+  // Only one growth mutation can be selected
   if (growthMutations.length > 1) {
-    return { isValid: false, error: "只能选择一个生长突变" };
+    return {
+      isValid: false,
+      error: "Only one growth mutation can be selected",
+    };
   }
 
-  // 温度突变只能选择一个
+  // Only one temperature mutation can be selected
   if (temperatureMutations.length > 1) {
-    return { isValid: false, error: "只能选择一个温度突变" };
+    return {
+      isValid: false,
+      error: "Only one temperature mutation can be selected",
+    };
   }
 
   return { isValid: true };
 };
 
 /**
- * 获取推荐突变组合
+ * Get recommended mutation combinations
  */
 export const getRecommendedMutations = (crop: Crop): string[] => {
   const recommendations: string[] = [];
 
-  // 根据作物稀有度推荐突变
+  // Recommend mutations based on crop rarity
   if (crop.rarity === "legendary") {
     recommendations.push(
       "rainbow",
@@ -161,7 +167,7 @@ export const getRecommendedMutations = (crop: Crop): string[] => {
 };
 
 /**
- * 计算交易分析
+ * Analyze trade
  */
 export const analyzeTrade = (
   yourValue: number,
@@ -184,13 +190,13 @@ export const analyzeTrade = (
 
   if (profitPercentage > 10) {
     isWin = true;
-    recommendation = "这是一个很好的交易！";
+    recommendation = "This is a great trade!";
   } else if (profitPercentage >= -10 && profitPercentage <= 10) {
     isFair = true;
-    recommendation = "这是一个公平的交易。";
+    recommendation = "This is a fair trade.";
   } else {
     isLoss = true;
-    recommendation = "这个交易可能不太划算。";
+    recommendation = "This trade might not be worth it.";
   }
 
   return {
