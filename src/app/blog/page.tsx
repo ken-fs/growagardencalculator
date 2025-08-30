@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -120,24 +121,24 @@ export default function BlogPage() {
               Use our free calculators to optimize your Grow A Garden strategy
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <Link
                 href="/"
                 className="px-6 py-3 bg-tech-glow text-white rounded-lg hover:bg-tech-cyan transition-colors font-medium"
               >
                 Crop Calculator
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/pets"
                 className="px-6 py-3 bg-tech-purple text-white rounded-lg hover:bg-tech-blue transition-colors font-medium"
               >
                 Pet Calculator
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/trade"
                 className="px-6 py-3 bg-tech-orange text-white rounded-lg hover:bg-tech-red transition-colors font-medium"
               >
                 Trade Analyzer
-              </a>
+              </Link>
             </div>
           </div>
         </div>
