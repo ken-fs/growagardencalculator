@@ -25,18 +25,23 @@ export default function MutationsPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen tech-dark-gradient relative">
+      {/* 科技背景效果 */}
+      <div className="matrix-bg"></div>
       <Navigation />
-      <main className="max-w-7xl mx-auto p-6">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">突变百科</h1>
-          <p className="text-gray-600">完整的 Grow A Garden 突变信息大全</p>
+      <main className="max-w-7xl mx-auto p-6 relative z-10">
+        <div className="text-center mb-8 space-y-4">
+          <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
+            突变百科
+          </h1>
+          <p className="text-muted-foreground text-lg">完整的 Grow A Garden 突变信息大全</p>
+          <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
         </div>
 
         {/* 生长突变 */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+        <Card className="mb-8 tech-card shadow-tech-glow">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="flex items-center gap-2 text-tech-glow">
               ⭐ 生长突变
             </CardTitle>
             <CardDescription>
@@ -70,9 +75,9 @@ export default function MutationsPage() {
         </Card>
 
         {/* 温度突变 */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+        <Card className="mb-8 tech-card shadow-tech-glow">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="flex items-center gap-2 text-tech-glow">
               ❄️ 温度突变
             </CardTitle>
             <CardDescription>
@@ -107,8 +112,8 @@ export default function MutationsPage() {
 
         {/* 环境突变 */}
         <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="flex items-center gap-2 text-tech-glow">
               ✨ 环境突变
             </CardTitle>
             <CardDescription>
@@ -143,7 +148,7 @@ export default function MutationsPage() {
 
         {/* 突变组合建议 */}
         <Card className="mt-8">
-          <CardHeader>
+          <CardHeader className="tech-scan-line">
             <CardTitle>突变组合建议</CardTitle>
             <CardDescription>推荐的突变组合以获得最大价值</CardDescription>
           </CardHeader>

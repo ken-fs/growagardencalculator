@@ -24,17 +24,17 @@ export default function PetsWikiPage() {
   const getRarityColor = (rarity: string) => {
     switch (rarity) {
       case "common":
-        return "text-gray-600 bg-gray-100";
+        return "text-muted-foreground bg-secondary/50 border-border";
       case "uncommon":
-        return "text-green-600 bg-green-100";
+        return "text-tech-green bg-tech-green/20 border-tech-green/30";
       case "rare":
-        return "text-blue-600 bg-blue-100";
+        return "text-tech-blue bg-tech-blue/20 border-tech-blue/30";
       case "epic":
-        return "text-purple-600 bg-purple-100";
+        return "text-tech-purple bg-tech-purple/20 border-tech-purple/30";
       case "legendary":
-        return "text-yellow-600 bg-yellow-100";
+        return "text-tech-orange bg-tech-orange/20 border-tech-orange/30";
       default:
-        return "text-gray-600 bg-gray-100";
+        return "text-muted-foreground bg-secondary/50 border-border";
     }
   };
 
@@ -56,18 +56,25 @@ export default function PetsWikiPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen tech-dark-gradient relative">
+      {/* 科技背景效果 */}
+      <div className="matrix-bg"></div>
       <Navigation />
-      <main className="max-w-7xl mx-auto p-6">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">宠物百科</h1>
-          <p className="text-gray-600">完整的 Grow A Garden 宠物信息大全</p>
+      <main className="max-w-7xl mx-auto p-6 relative z-10">
+        <div className="text-center mb-8 space-y-4">
+          <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
+            宠物百科
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            完整的 Grow A Garden 宠物信息大全
+          </p>
+          <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
         </div>
 
         {/* 农场宠物 */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+        <Card className="mb-8 tech-card shadow-tech-glow">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="flex items-center gap-2 text-tech-glow">
               🐄 农场宠物
             </CardTitle>
             <CardDescription>传统的农场动物，适合新手玩家</CardDescription>
@@ -77,23 +84,27 @@ export default function PetsWikiPage() {
               {farmPets.map((pet) => (
                 <div
                   key={pet.id}
-                  className="p-4 border rounded-lg hover:shadow-md transition-shadow"
+                  className="p-4 border border-border rounded-lg hover:shadow-tech-glow transition-all duration-300 bg-secondary/30 hover:bg-secondary/50"
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold">{pet.name}</h3>
-                    <span className="text-lg font-bold text-green-600">
+                    <h3 className="font-semibold text-foreground">
+                      {pet.name}
+                    </h3>
+                    <span className="text-lg font-bold text-tech-glow">
                       {formatCurrency(pet.baseValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${getRarityColor(
+                      className={`px-2 py-1 rounded-full text-xs font-medium border ${getRarityColor(
                         pet.rarity
                       )}`}
                     >
                       {getRarityText(pet.rarity)}
                     </span>
-                    <span className="text-sm text-gray-500">Sheckles</span>
+                    <span className="text-sm text-muted-foreground">
+                      Sheckles
+                    </span>
                   </div>
                 </div>
               ))}
@@ -102,9 +113,9 @@ export default function PetsWikiPage() {
         </Card>
 
         {/* 野生动物 */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+        <Card className="mb-8 tech-card shadow-tech-glow">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="flex items-center gap-2 text-tech-glow">
               🦊 野生动物
             </CardTitle>
             <CardDescription>野生的动物，需要更多技巧才能获得</CardDescription>
@@ -114,23 +125,27 @@ export default function PetsWikiPage() {
               {wildPets.map((pet) => (
                 <div
                   key={pet.id}
-                  className="p-4 border rounded-lg hover:shadow-md transition-shadow"
+                  className="p-4 border border-border rounded-lg hover:shadow-tech-glow transition-all duration-300 bg-secondary/30 hover:bg-secondary/50"
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold">{pet.name}</h3>
-                    <span className="text-lg font-bold text-green-600">
+                    <h3 className="font-semibold text-foreground">
+                      {pet.name}
+                    </h3>
+                    <span className="text-lg font-bold text-tech-glow">
                       {formatCurrency(pet.baseValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${getRarityColor(
+                      className={`px-2 py-1 rounded-full text-xs font-medium border ${getRarityColor(
                         pet.rarity
                       )}`}
                     >
                       {getRarityText(pet.rarity)}
                     </span>
-                    <span className="text-sm text-gray-500">Sheckles</span>
+                    <span className="text-sm text-muted-foreground">
+                      Sheckles
+                    </span>
                   </div>
                 </div>
               ))}
@@ -139,9 +154,9 @@ export default function PetsWikiPage() {
         </Card>
 
         {/* 特殊宠物 */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+        <Card className="tech-card shadow-tech-glow">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="flex items-center gap-2 text-tech-glow">
               ⭐ 特殊宠物
             </CardTitle>
             <CardDescription>稀有珍贵的特殊宠物，价值极高</CardDescription>
@@ -151,23 +166,27 @@ export default function PetsWikiPage() {
               {specialPets.map((pet) => (
                 <div
                   key={pet.id}
-                  className="p-4 border rounded-lg hover:shadow-md transition-shadow"
+                  className="p-4 border border-border rounded-lg hover:shadow-tech-glow transition-all duration-300 bg-secondary/30 hover:bg-secondary/50"
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold">{pet.name}</h3>
-                    <span className="text-lg font-bold text-green-600">
+                    <h3 className="font-semibold text-foreground">
+                      {pet.name}
+                    </h3>
+                    <span className="text-lg font-bold text-tech-glow">
                       {formatCurrency(pet.baseValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${getRarityColor(
+                      className={`px-2 py-1 rounded-full text-xs font-medium border ${getRarityColor(
                         pet.rarity
                       )}`}
                     >
                       {getRarityText(pet.rarity)}
                     </span>
-                    <span className="text-sm text-gray-500">Sheckles</span>
+                    <span className="text-sm text-muted-foreground">
+                      Sheckles
+                    </span>
                   </div>
                 </div>
               ))}
@@ -177,8 +196,8 @@ export default function PetsWikiPage() {
 
         {/* 宠物获取建议 */}
         <Card className="mt-8">
-          <CardHeader>
-            <CardTitle>宠物获取建议</CardTitle>
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="text-tech-glow">宠物获取建议</CardTitle>
             <CardDescription>根据宠物类型和稀有度的获取建议</CardDescription>
           </CardHeader>
           <CardContent>

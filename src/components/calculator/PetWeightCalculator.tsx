@@ -45,30 +45,31 @@ export const PetWeightCalculator: React.FC = () => {
   const selectedPetData = pets.find((p) => p.id === selectedPet);
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+    <div className="max-w-4xl mx-auto p-6 space-y-8">
+      <div className="text-center space-y-4">
+        <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
           宠物重量计算器
         </h1>
-        <p className="text-gray-600">计算宠物的重量和价值</p>
+        <p className="text-muted-foreground text-lg">计算宠物的重量和价值</p>
+        <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* 输入区域 */}
-        <Card>
-          <CardHeader>
-            <CardTitle>宠物设置</CardTitle>
+        <Card className="tech-card shadow-tech-glow">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="text-tech-glow">宠物设置</CardTitle>
             <CardDescription>选择宠物并设置重量</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-tech-glow mb-3">
                 选择宠物
               </label>
               <select
                 value={selectedPet}
                 onChange={(e) => handlePetChange(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full p-3 tech-input rounded-lg focus:ring-2 focus:ring-tech-glow focus:border-transparent text-foreground"
               >
                 {pets.map((pet) => (
                   <option key={pet.id} value={pet.id}>
@@ -79,7 +80,7 @@ export const PetWeightCalculator: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-tech-glow mb-3">
                 重量 (kg)
               </label>
               <Input
@@ -89,29 +90,58 @@ export const PetWeightCalculator: React.FC = () => {
                 min="0"
                 step="0.1"
                 placeholder="输入宠物重量"
+                className="tech-input"
               />
             </div>
 
             {selectedPetData && (
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">宠物信息</h3>
-                <div className="space-y-1 text-sm text-gray-600">
-                  <div>名称: {selectedPetData.name}</div>
-                  <div>
-                    基础价值: {formatCurrency(selectedPetData.baseValue)}{" "}
-                    Sheckles
+              <div className="p-4 bg-secondary/30 rounded-lg border border-tech-glow/30">
+                <h3 className="font-semibold text-tech-glow mb-3 flex items-center">
+                  <span className="mr-2">🐾</span>
+                  宠物信息
+                </h3>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <div className="flex justify-between">
+                    <span>名称:</span>
+                    <span className="text-tech-cyan">
+                      {selectedPetData.name}
+                    </span>
                   </div>
-                  <div>稀有度: {selectedPetData.rarity}</div>
-                  <div>类别: {selectedPetData.category}</div>
+                  <div className="flex justify-between">
+                    <span>基础价值:</span>
+                    <span className="text-tech-blue">
+                      {formatCurrency(selectedPetData.baseValue)} Sheckles
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>稀有度:</span>
+                    <span className="text-tech-purple">
+                      {selectedPetData.rarity}
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>类别:</span>
+                    <span className="text-tech-orange">
+                      {selectedPetData.category}
+                    </span>
+                  </div>
                 </div>
               </div>
             )}
 
-            <div className="flex gap-2">
-              <Button onClick={handleCalculate} className="flex-1">
+            <div className="flex gap-4">
+              <Button
+                onClick={handleCalculate}
+                type="submit"
+                className="flex-1 tech-button hover:animate-pulse-glow"
+              >
                 计算价值
               </Button>
-              <Button onClick={handleReset} variant="outline">
+              <Button
+                onClick={handleReset}
+                variant="outline"
+                className="border-tech-glow text-tech-glow hover:bg-tech-glow hover:text-primary-foreground transition-all duration-300"
+              >
                 重置
               </Button>
             </div>
@@ -119,55 +149,73 @@ export const PetWeightCalculator: React.FC = () => {
         </Card>
 
         {/* 结果区域 */}
-        <Card>
-          <CardHeader>
-            <CardTitle>计算结果</CardTitle>
+        <Card className="tech-card shadow-tech-glow">
+          <CardHeader className="tech-scan-line">
+            <CardTitle className="text-tech-glow">计算结果</CardTitle>
             <CardDescription>宠物价值分析</CardDescription>
           </CardHeader>
           <CardContent>
             {result ? (
-              <div className="space-y-4">
-                <div className="text-center p-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg text-white">
-                  <div className="text-3xl font-bold">
+              <div className="space-y-6">
+                <div className="text-center p-8 tech-gradient rounded-lg text-white shadow-tech-glow animate-pulse-glow">
+                  <div className="text-4xl font-bold mb-2">
                     {formatCurrency(result.value)}
                   </div>
-                  <div className="text-lg">Sheckles</div>
+                  <div className="text-xl">Sheckles</div>
                 </div>
 
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">宠物名称:</span>
-                    <span className="font-medium">{result.pet.name}</span>
+                <div className="space-y-4 bg-secondary/30 rounded-lg p-4 border border-tech-glow/30">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">宠物名称:</span>
+                    <span className="font-medium text-tech-cyan">
+                      {result.pet.name}
+                    </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">基础价值:</span>
-                    <span className="font-medium">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">基础价值:</span>
+                    <span className="font-medium text-tech-blue">
                       {formatCurrency(result.pet.baseValue)}
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">重量:</span>
-                    <span className="font-medium">{weight} kg</span>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">重量:</span>
+                    <span className="font-medium text-tech-purple">
+                      {weight} kg
+                    </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">总价值:</span>
-                    <span className="font-medium text-green-600">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">总价值:</span>
+                    <span className="font-medium text-tech-glow">
                       {formatCurrency(result.value)}
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 bg-blue-50 rounded-lg">
-                  <h4 className="font-medium text-blue-800 mb-2">宠物信息</h4>
-                  <div className="text-sm text-blue-700 space-y-1">
-                    <div>稀有度: {result.pet.rarity}</div>
-                    <div>类别: {result.pet.category}</div>
+                <div className="p-4 bg-secondary/30 rounded-lg border border-tech-glow/30">
+                  <h4 className="font-medium text-tech-glow mb-3 flex items-center">
+                    <span className="mr-2">🐾</span>
+                    宠物信息
+                  </h4>
+                  <div className="text-sm text-muted-foreground space-y-2">
+                    <div className="flex justify-between">
+                      <span>稀有度:</span>
+                      <span className="text-tech-purple">
+                        {result.pet.rarity}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>类别:</span>
+                      <span className="text-tech-orange">
+                        {result.pet.category}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             ) : (
-              <div className="text-center text-gray-500 py-8">
-                点击"计算价值"查看结果
+              <div className="text-center text-muted-foreground py-12">
+                <div className="text-6xl mb-4">🐾</div>
+                <p className="text-lg">点击"计算价值"查看结果</p>
               </div>
             )}
           </CardContent>
