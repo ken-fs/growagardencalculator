@@ -235,7 +235,9 @@ export const PetWeightCalculator: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Farm Pets */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-3">🐄 Farm Pets</h3>
+              <h3 className="font-semibold text-white-800 mb-3">
+                🐄 Farm Pets
+              </h3>
               <div className="space-y-2">
                 {pets
                   .filter((p) => p.category === "farm")
@@ -255,7 +257,7 @@ export const PetWeightCalculator: React.FC = () => {
 
             {/* Wild Animals */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-white-800 mb-3">
                 🦊 Wild Animals
               </h3>
               <div className="space-y-2">
@@ -277,7 +279,7 @@ export const PetWeightCalculator: React.FC = () => {
 
             {/* Special Pets */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-3">
+              <h3 className="font-semibold text-white-800 mb-3">
                 ⭐ Special Pets
               </h3>
               <div className="space-y-2">

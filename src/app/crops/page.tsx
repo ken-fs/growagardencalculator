@@ -68,14 +68,14 @@ export default function CropsPage() {
           <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
         </div>
 
-        {/* 水果作物 */}
+        {/* Fruit Crops */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🍎 水果作物
+              🍎 Fruit Crops
             </CardTitle>
             <CardDescription>
-              各种美味的水果，提供不同的基础价值
+              Various delicious fruits, offering different base values
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -121,13 +121,15 @@ export default function CropsPage() {
           </CardContent>
         </Card>
 
-        {/* 蔬菜作物 */}
+        {/* Vegetable Crops */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🥕 蔬菜作物
+              🥕 Vegetable Crops
             </CardTitle>
-            <CardDescription>营养丰富的蔬菜，适合日常种植</CardDescription>
+            <CardDescription>
+              Nutritious vegetables, suitable for daily cultivation
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -172,13 +174,15 @@ export default function CropsPage() {
           </CardContent>
         </Card>
 
-        {/* 花卉作物 */}
+        {/* Flower Crops */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🌸 花卉作物
+              🌸 Flower Crops
             </CardTitle>
-            <CardDescription>美丽的花朵，装饰你的花园</CardDescription>
+            <CardDescription>
+              Beautiful flowers to decorate your garden
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -223,13 +227,15 @@ export default function CropsPage() {
           </CardContent>
         </Card>
 
-        {/* 特殊作物 */}
+        {/* Special Crops */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              ⭐ 特殊作物
+              ⭐ Special Crops
             </CardTitle>
-            <CardDescription>稀有珍贵的特殊作物，价值极高</CardDescription>
+            <CardDescription>
+              Rare and precious special crops with extremely high value
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -274,75 +280,79 @@ export default function CropsPage() {
           </CardContent>
         </Card>
 
-        {/* 种植建议 */}
+        {/* Growing Recommendations */}
         <Card className="mt-8">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">种植建议</CardTitle>
-            <CardDescription>根据作物类型和稀有度的种植建议</CardDescription>
+            <CardTitle className="text-tech-glow">
+              Growing Recommendations
+            </CardTitle>
+            <CardDescription>
+              Growing recommendations based on crop type and rarity
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-4 bg-secondary/30 rounded-lg border border-tech-glow/30">
                 <h3 className="font-semibold text-tech-glow mb-2 flex items-center">
                   <span className="mr-2">🌱</span>
-                  新手推荐
+                  Beginner Recommended
                 </h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  适合刚开始的玩家
+                  Suitable for new players
                 </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 苹果 (248 Sheckles)</li>
-                  <li>• 胡萝卜 (89 Sheckles)</li>
-                  <li>• 玫瑰 (189 Sheckles)</li>
-                  <li>• 投资少，回报稳定</li>
+                  <li>• Apple (248 Sheckles)</li>
+                  <li>• Carrot (89 Sheckles)</li>
+                  <li>• Rose (189 Sheckles)</li>
+                  <li>• Low investment, stable returns</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-secondary/30 rounded-lg border border-tech-green/30">
                 <h3 className="font-semibold text-tech-green mb-2 flex items-center">
                   <span className="mr-2">⚡</span>
-                  进阶推荐
+                  Intermediate Recommended
                 </h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  有一定经验的玩家
+                  For players with some experience
                 </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 龙果 (445 Sheckles)</li>
-                  <li>• 洋蓟 (234 Sheckles)</li>
-                  <li>• 兰花 (289 Sheckles)</li>
-                  <li>• 平衡收益与风险</li>
+                  <li>• Dragon Fruit (445 Sheckles)</li>
+                  <li>• Artichoke (234 Sheckles)</li>
+                  <li>• Orchid (289 Sheckles)</li>
+                  <li>• Balance returns and risks</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-secondary/30 rounded-lg border border-tech-blue/30">
                 <h3 className="font-semibold text-tech-blue mb-2 flex items-center">
                   <span className="mr-2">🚀</span>
-                  高级推荐
+                  Advanced Recommended
                 </h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  经验丰富的玩家
+                  For experienced players
                 </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 金苹果 (1,240 Sheckles)</li>
-                  <li>• 水晶浆果 (890 Sheckles)</li>
-                  <li>• 月亮果实 (1,560 Sheckles)</li>
-                  <li>• 高投入高回报</li>
+                  <li>• Golden Apple (1,240 Sheckles)</li>
+                  <li>• Crystal Berry (890 Sheckles)</li>
+                  <li>• Moon Fruit (1,560 Sheckles)</li>
+                  <li>• High investment, high returns</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-secondary/30 rounded-lg border border-tech-purple/30">
                 <h3 className="font-semibold text-tech-purple mb-2 flex items-center">
                   <span className="mr-2">💎</span>
-                  终极推荐
+                  Ultimate Recommended
                 </h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  追求极限的玩家
+                  For players seeking the ultimate
                 </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 彩虹果实 (3,100 Sheckles)</li>
-                  <li>• 钻石甜瓜 (4,450 Sheckles)</li>
-                  <li>• 需要大量资源和运气</li>
-                  <li>• 最高价值作物</li>
+                  <li>• Rainbow Fruit (3,100 Sheckles)</li>
+                  <li>• Diamond Melon (4,450 Sheckles)</li>
+                  <li>• Requires massive resources and luck</li>
+                  <li>• Highest value crops</li>
                 </ul>
               </div>
             </div>

@@ -3,14 +3,15 @@ import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "宠物计算器 - Grow A Garden 计算器",
-  description: "专业的宠物计算器，帮助玩家计算宠物价值和重量，优化宠物选择。",
+  title: "Pet Calculator - Grow A Garden Calculator",
+  description:
+    "Professional pet calculator to help players calculate pet values and weights, optimize pet selection.",
 };
 
 export default function PetsPage() {
   return (
     <div className="min-h-screen tech-dark-gradient relative">
-      {/* 科技背景效果 */}
+      {/* Tech background effect */}
       <div className="matrix-bg"></div>
       <Navigation />
       <main className="relative z-10">

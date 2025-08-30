@@ -64,22 +64,22 @@ export default function GearsPage() {
       <main className="max-w-7xl mx-auto p-6 relative z-10">
         <div className="text-center mb-8 space-y-4">
           <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
-            装备百科
+            Gear Wiki
           </h1>
           <p className="text-muted-foreground text-lg">
-            完整的 Grow A Garden 装备信息大全
+            Complete Grow A Garden gear information guide
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
         </div>
 
-        {/* 洒水器 */}
+        {/* Sprinklers */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              💧 洒水器
+              💧 Sprinklers
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              自动浇水的设备，提高作物生长效率
+              Automatic watering equipment, improving crop growth efficiency
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -115,14 +115,14 @@ export default function GearsPage() {
           </CardContent>
         </Card>
 
-        {/* 肥料 */}
+        {/* Fertilizers */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🌱 肥料
+              🌱 Fertilizers
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              促进作物生长的营养剂
+              Nutrients that promote crop growth
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -158,14 +158,14 @@ export default function GearsPage() {
           </CardContent>
         </Card>
 
-        {/* 工具 */}
+        {/* Tools */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🔧 工具
+              🔧 Tools
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              农场工作必需的工具
+              Essential tools for farm work
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -201,14 +201,14 @@ export default function GearsPage() {
           </CardContent>
         </Card>
 
-        {/* 装饰品 */}
+        {/* Decorations */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🎨 装饰品
+              🎨 Decorations
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              美化农场的装饰物品
+              Decorative items to beautify your farm
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -244,63 +244,73 @@ export default function GearsPage() {
           </CardContent>
         </Card>
 
-        {/* 装备使用建议 */}
+        {/* Gear Usage Recommendations */}
         <Card className="mt-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">装备使用建议</CardTitle>
+            <CardTitle className="text-tech-glow">
+              Gear Usage Recommendations
+            </CardTitle>
             <CardDescription className="text-muted-foreground">
-              根据装备类型和稀有度的使用建议
+              Usage recommendations based on gear type and rarity
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-4 bg-secondary/30 border border-tech-glow/30 rounded-lg">
-                <h3 className="font-semibold text-tech-glow mb-2">💧 洒水器</h3>
+                <h3 className="font-semibold text-tech-glow mb-2">
+                  💧 Sprinklers
+                </h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  自动浇水设备
+                  Automatic watering equipment
                 </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 提高作物生长速度</li>
-                  <li>• 减少手动浇水时间</li>
-                  <li>• 高级洒水器效果更好</li>
-                  <li>• 建议优先购买</li>
+                  <li>• Increases crop growth speed</li>
+                  <li>• Reduces manual watering time</li>
+                  <li>• Advanced sprinklers work better</li>
+                  <li>• Recommended priority purchase</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-secondary/30 border border-tech-glow/30 rounded-lg">
-                <h3 className="font-semibold text-tech-glow mb-2">🌱 肥料</h3>
+                <h3 className="font-semibold text-tech-glow mb-2">
+                  🌱 Fertilizers
+                </h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  促进作物生长
+                  Promotes crop growth
                 </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 增加作物产量</li>
-                  <li>• 提高突变概率</li>
-                  <li>• 配合洒水器使用</li>
-                  <li>• 投资回报率高</li>
+                  <li>• Increases crop yield</li>
+                  <li>• Improves mutation probability</li>
+                  <li>• Use with sprinklers</li>
+                  <li>• High return on investment</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-secondary/30 border border-tech-glow/30 rounded-lg">
-                <h3 className="font-semibold text-tech-glow mb-2">🔧 工具</h3>
+                <h3 className="font-semibold text-tech-glow mb-2">🔧 Tools</h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  农场工作工具
+                  Farm work tools
                 </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 提高工作效率</li>
-                  <li>• 减少体力消耗</li>
-                  <li>• 高级工具效果更好</li>
-                  <li>• 长期投资价值</li>
+                  <li>• Improves work efficiency</li>
+                  <li>• Reduces stamina consumption</li>
+                  <li>• Advanced tools work better</li>
+                  <li>• Long-term investment value</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-secondary/30 border border-tech-glow/30 rounded-lg">
-                <h3 className="font-semibold text-tech-glow mb-2">🎨 装饰品</h3>
-                <p className="text-muted-foreground text-sm mb-2">美化农场</p>
+                <h3 className="font-semibold text-tech-glow mb-2">
+                  🎨 Decorations
+                </h3>
+                <p className="text-muted-foreground text-sm mb-2">
+                  Beautify farm
+                </p>
                 <ul className="text-muted-foreground text-sm space-y-1">
-                  <li>• 提升农场美观度</li>
-                  <li>• 增加农场价值</li>
-                  <li>• 特殊装饰有加成</li>
-                  <li>• 后期投资选择</li>
+                  <li>• Enhances farm aesthetics</li>
+                  <li>• Increases farm value</li>
+                  <li>• Special decorations have bonuses</li>
+                  <li>• Late-game investment choice</li>
                 </ul>
               </div>
             </div>

@@ -3,15 +3,15 @@ import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "WFL 交易分析器 - Grow A Garden 计算器",
+  title: "WFL Trade Analyzer - Grow A Garden Calculator",
   description:
-    "专业的 WFL (Win/Fair/Loss) 交易分析工具，帮助玩家判断交易是否公平，优化交易决策。",
+    "Professional WFL (Win/Fair/Loss) trade analysis tool to help players determine if trades are fair and optimize trading decisions.",
 };
 
 export default function TradePage() {
   return (
     <div className="min-h-screen tech-dark-gradient relative">
-      {/* 科技背景效果 */}
+      {/* Tech background effect */}
       <div className="matrix-bg"></div>
       <Navigation />
       <main className="relative z-10">

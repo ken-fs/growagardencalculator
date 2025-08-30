@@ -20,14 +20,9 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const navItems = [
     { title: "Calculator", href: "/", description: "Crop value calculation" },
     {
-      title: "Weight Calculator",
-      href: "/weight",
-      description: "Pet weight calculation",
-    },
-    {
       title: "Pet Calculator",
       href: "/pets",
-      description: "Pet value calculation",
+      description: "Pet weight and value calculation",
     },
     {
       title: "Mutation Wiki",

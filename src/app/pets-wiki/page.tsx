@@ -11,9 +11,9 @@ import {
 import { formatCurrency } from "@/utils/calculator";
 
 export const metadata = {
-  title: "宠物百科 - Grow A Garden 计算器",
+  title: "Pet Wiki - Grow A Garden Calculator",
   description:
-    "完整的 Grow A Garden 宠物信息大全，包含所有宠物类型、价值和稀有度。",
+    "Complete Grow A Garden pet information guide, including all pet types, values and rarities.",
 };
 
 export default function PetsWikiPage() {
@@ -41,43 +41,45 @@ export default function PetsWikiPage() {
   const getRarityText = (rarity: string) => {
     switch (rarity) {
       case "common":
-        return "普通";
+        return "Common";
       case "uncommon":
-        return "不常见";
+        return "Uncommon";
       case "rare":
-        return "稀有";
+        return "Rare";
       case "epic":
-        return "史诗";
+        return "Epic";
       case "legendary":
-        return "传说";
+        return "Legendary";
       default:
-        return "未知";
+        return "Unknown";
     }
   };
 
   return (
     <div className="min-h-screen tech-dark-gradient relative">
-      {/* 科技背景效果 */}
+      {/* Tech background effect */}
       <div className="matrix-bg"></div>
       <Navigation />
       <main className="max-w-7xl mx-auto p-6 relative z-10">
         <div className="text-center mb-8 space-y-4">
           <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
-            宠物百科
+            Pet Wiki
           </h1>
           <p className="text-muted-foreground text-lg">
-            完整的 Grow A Garden 宠物信息大全
+            Complete Grow A Garden pet information guide
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
         </div>
 
-        {/* 农场宠物 */}
+        {/* Farm Pets */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🐄 农场宠物
+              🐄 Farm Pets
             </CardTitle>
-            <CardDescription>传统的农场动物，适合新手玩家</CardDescription>
+            <CardDescription>
+              Traditional farm animals, suitable for new players
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -112,13 +114,15 @@ export default function PetsWikiPage() {
           </CardContent>
         </Card>
 
-        {/* 野生动物 */}
+        {/* Wild Animals */}
         <Card className="mb-8 tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              🦊 野生动物
+              🦊 Wild Animals
             </CardTitle>
-            <CardDescription>野生的动物，需要更多技巧才能获得</CardDescription>
+            <CardDescription>
+              Wild animals that require more skill to obtain
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -153,13 +157,15 @@ export default function PetsWikiPage() {
           </CardContent>
         </Card>
 
-        {/* 特殊宠物 */}
+        {/* Special Pets */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
             <CardTitle className="flex items-center gap-2 text-tech-glow">
-              ⭐ 特殊宠物
+              ⭐ Special Pets
             </CardTitle>
-            <CardDescription>稀有珍贵的特殊宠物，价值极高</CardDescription>
+            <CardDescription>
+              Rare and precious special pets with extremely high value
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -194,44 +200,60 @@ export default function PetsWikiPage() {
           </CardContent>
         </Card>
 
-        {/* 宠物获取建议 */}
+        {/* Pet Acquisition Recommendations */}
         <Card className="mt-8">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">宠物获取建议</CardTitle>
-            <CardDescription>根据宠物类型和稀有度的获取建议</CardDescription>
+            <CardTitle className="text-tech-glow">
+              Pet Acquisition Recommendations
+            </CardTitle>
+            <CardDescription>
+              Acquisition recommendations based on pet type and rarity
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="p-4 bg-gray-50 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">新手推荐</h3>
-                <p className="text-gray-600 text-sm mb-2">适合刚开始的玩家</p>
+                <h3 className="font-semibold text-gray-800 mb-2">
+                  Beginner Recommended
+                </h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  Suitable for new players
+                </p>
                 <ul className="text-gray-600 text-sm space-y-1">
-                  <li>• 奶牛 (500 Sheckles)</li>
-                  <li>• 鸡 (300 Sheckles)</li>
-                  <li>• 猪 (400 Sheckles)</li>
-                  <li>• 容易获得，价值稳定</li>
+                  <li>• Cow (500 Sheckles)</li>
+                  <li>• Chicken (300 Sheckles)</li>
+                  <li>• Pig (400 Sheckles)</li>
+                  <li>• Easy to obtain, stable value</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-green-50 rounded-lg">
-                <h3 className="font-semibold text-green-800 mb-2">进阶推荐</h3>
-                <p className="text-green-600 text-sm mb-2">有一定经验的玩家</p>
+                <h3 className="font-semibold text-green-800 mb-2">
+                  Intermediate Recommended
+                </h3>
+                <p className="text-green-600 text-sm mb-2">
+                  For players with some experience
+                </p>
                 <ul className="text-green-600 text-sm space-y-1">
-                  <li>• 狐狸 (1,200 Sheckles)</li>
-                  <li>• 狼 (1,500 Sheckles)</li>
-                  <li>• 熊 (2,000 Sheckles)</li>
-                  <li>• 需要更多技巧获得</li>
+                  <li>• Fox (1,200 Sheckles)</li>
+                  <li>• Wolf (1,500 Sheckles)</li>
+                  <li>• Bear (2,000 Sheckles)</li>
+                  <li>• Requires more skill to obtain</li>
                 </ul>
               </div>
 
               <div className="p-4 bg-purple-50 rounded-lg">
-                <h3 className="font-semibold text-purple-800 mb-2">高级推荐</h3>
-                <p className="text-purple-600 text-sm mb-2">经验丰富的玩家</p>
+                <h3 className="font-semibold text-purple-800 mb-2">
+                  Advanced Recommended
+                </h3>
+                <p className="text-purple-600 text-sm mb-2">
+                  For experienced players
+                </p>
                 <ul className="text-purple-600 text-sm space-y-1">
-                  <li>• 金奶牛 (5,000 Sheckles)</li>
-                  <li>• 彩虹鸡 (3,000 Sheckles)</li>
-                  <li>• 水晶猪 (4,000 Sheckles)</li>
-                  <li>• 高价值特殊宠物</li>
+                  <li>• Golden Cow (5,000 Sheckles)</li>
+                  <li>• Rainbow Chicken (3,000 Sheckles)</li>
+                  <li>• Crystal Pig (4,000 Sheckles)</li>
+                  <li>• High-value special pets</li>
                 </ul>
               </div>
             </div>

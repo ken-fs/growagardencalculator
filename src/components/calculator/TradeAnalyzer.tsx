@@ -43,33 +43,33 @@ export const TradeAnalyzer: React.FC = () => {
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-tech-blue via-tech-purple to-tech-cyan bg-clip-text text-transparent animate-pulse-glow">
-          WFL 交易分析器
+          WFL Trade Analyzer
         </h1>
         <p className="text-muted-foreground text-lg">
-          分析交易是否公平，判断 Win/Fair/Loss
+          Analyze if trades are fair, determine Win/Fair/Loss
         </p>
         <div className="w-32 h-1 bg-gradient-to-r from-tech-blue to-tech-purple mx-auto rounded-full shadow-tech-glow"></div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* 输入区域 */}
+        {/* Input Area */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">交易价值输入</CardTitle>
+            <CardTitle className="text-tech-glow">Trade Value Input</CardTitle>
             <CardDescription className="text-muted-foreground">
-              输入你和对方的物品价值
+              Enter your and their item values
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-tech-glow mb-2">
-                你的物品价值 (Sheckles)
+                Your Item Value (Sheckles)
               </label>
               <Input
                 type="number"
                 value={yourValue || ""}
                 onChange={(e) => handleYourValueChange(Number(e.target.value))}
-                placeholder="输入你的物品价值"
+                placeholder="Enter your item value"
                 min="0"
                 className="tech-input"
               />
@@ -77,13 +77,13 @@ export const TradeAnalyzer: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-tech-glow mb-2">
-                对方的物品价值 (Sheckles)
+                Their Item Value (Sheckles)
               </label>
               <Input
                 type="number"
                 value={theirValue || ""}
                 onChange={(e) => handleTheirValueChange(Number(e.target.value))}
-                placeholder="输入对方的物品价值"
+                placeholder="Enter their item value"
                 min="0"
                 className="tech-input"
               />
@@ -95,31 +95,33 @@ export const TradeAnalyzer: React.FC = () => {
                 className="flex-1 tech-button"
                 disabled={yourValue <= 0 || theirValue <= 0}
               >
-                分析交易
+                Analyze Trade
               </Button>
               <Button
                 onClick={handleReset}
                 variant="outline"
                 className="border-tech-glow"
               >
-                重置
+                Reset
               </Button>
             </div>
           </CardContent>
         </Card>
 
-        {/* 结果区域 */}
+        {/* Results Area */}
         <Card className="tech-card shadow-tech-glow">
           <CardHeader className="tech-scan-line">
-            <CardTitle className="text-tech-glow">交易分析结果</CardTitle>
+            <CardTitle className="text-tech-glow">
+              Trade Analysis Results
+            </CardTitle>
             <CardDescription className="text-muted-foreground">
-              交易价值分析
+              Trade value analysis
             </CardDescription>
           </CardHeader>
           <CardContent>
             {analysis ? (
               <div className="space-y-4">
-                {/* 主要结果 */}
+                {/* Main Results */}
                 <div
                   className={`text-center p-6 rounded-lg tech-gradient shadow-tech-glow animate-pulse-glow ${
                     analysis.isWin
@@ -153,22 +155,22 @@ export const TradeAnalyzer: React.FC = () => {
                   </div>
                 </div>
 
-                {/* 详细数据 */}
+                {/* Detailed Data */}
                 <div className="space-y-3">
                   <div className="flex justify-between bg-secondary/30 p-3 rounded-lg border border-tech-glow/30">
-                    <span className="text-muted-foreground">你的价值:</span>
+                    <span className="text-muted-foreground">Your Value:</span>
                     <span className="font-medium text-tech-glow">
                       {formatCurrency(yourValue)}
                     </span>
                   </div>
                   <div className="flex justify-between bg-secondary/30 p-3 rounded-lg border border-tech-glow/30">
-                    <span className="text-muted-foreground">对方价值:</span>
+                    <span className="text-muted-foreground">Their Value:</span>
                     <span className="font-medium text-tech-glow">
                       {formatCurrency(theirValue)}
                     </span>
                   </div>
                   <div className="flex justify-between bg-secondary/30 p-3 rounded-lg border border-tech-glow/30">
-                    <span className="text-muted-foreground">利润/亏损:</span>
+                    <span className="text-muted-foreground">Profit/Loss:</span>
                     <span
                       className={`font-medium ${
                         analysis.profit >= 0
@@ -181,7 +183,7 @@ export const TradeAnalyzer: React.FC = () => {
                     </span>
                   </div>
                   <div className="flex justify-between bg-secondary/30 p-3 rounded-lg border border-tech-glow/30">
-                    <span className="text-muted-foreground">利润率:</span>
+                    <span className="text-muted-foreground">Profit Rate:</span>
                     <span
                       className={`font-medium ${
                         analysis.profitPercentage >= 0
@@ -195,50 +197,53 @@ export const TradeAnalyzer: React.FC = () => {
                   </div>
                 </div>
 
-                {/* 交易建议 */}
+                {/* Trade Recommendations */}
                 <div className="p-4 bg-secondary/30 rounded-lg border border-tech-glow/30">
-                  <h4 className="font-medium text-tech-glow mb-2">交易建议:</h4>
+                  <h4 className="font-medium text-tech-glow mb-2">
+                    Trade Recommendation:
+                  </h4>
                   <p className="text-sm text-muted-foreground">
                     {analysis.isWin
-                      ? "这个交易对你很有利，建议接受！"
+                      ? "This trade is very favorable for you, recommend accepting!"
                       : analysis.isFair
-                      ? "这是一个公平的交易，可以根据个人喜好决定。"
-                      : "这个交易可能不太划算，建议重新考虑或寻找更好的交易。"}
+                      ? "This is a fair trade, you can decide based on personal preference."
+                      : "This trade may not be cost-effective, recommend reconsidering or finding a better trade."}
                   </p>
                 </div>
               </div>
             ) : (
               <div className="text-center text-muted-foreground py-8">
-                输入交易价值并点击&quot;分析交易&quot;查看结果
+                Enter trade values and click &quot;Analyze Trade&quot; to view
+                results
               </div>
             )}
           </CardContent>
         </Card>
       </div>
 
-      {/* 交易提示 */}
+      {/* Trade Tips */}
       <Card className="tech-card shadow-tech-glow">
         <CardHeader className="tech-scan-line">
-          <CardTitle className="text-tech-glow">交易分析说明</CardTitle>
+          <CardTitle className="text-tech-glow">Trade Analysis Guide</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center p-4 bg-secondary/30 border border-tech-glow/30 rounded-lg">
               <div className="text-2xl font-bold text-tech-green mb-2">WIN</div>
               <div className="text-sm text-muted-foreground">
-                你的物品价值高于对方，利润超过10%
+                Your item value is higher than theirs, profit exceeds 10%
               </div>
             </div>
             <div className="text-center p-4 bg-secondary/30 border border-tech-glow/30 rounded-lg">
               <div className="text-2xl font-bold text-tech-blue mb-2">FAIR</div>
               <div className="text-sm text-muted-foreground">
-                双方物品价值相当，利润在±10%之间
+                Both items have similar value, profit within ±10%
               </div>
             </div>
             <div className="text-center p-4 bg-secondary/30 border border-tech-glow/30 rounded-lg">
               <div className="text-2xl font-bold text-tech-red mb-2">LOSS</div>
               <div className="text-sm text-muted-foreground">
-                你的物品价值低于对方，亏损超过10%
+                Your item value is lower than theirs, loss exceeds 10%
               </div>
             </div>
           </div>
