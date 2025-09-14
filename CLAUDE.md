@@ -68,22 +68,23 @@ The core calculation engine handles:
 ### App Router Structure
 ```
 src/app/
-├── [locale]/             # Internationalized routes (en, zh)
-│   ├── layout.tsx        # Localized root layout
-│   ├── page.tsx          # Main calculator page
-│   ├── trade/page.tsx    # Trade analyzer
-│   ├── wiki/             # Wiki section
-│   │   ├── layout.tsx    # Wiki layout with SEO
-│   │   ├── page.tsx      # Wiki hub page
-│   │   ├── mutations/    # Mutation wiki with structured data
-│   │   ├── crops/        # Crop wiki
-│   │   ├── pets/         # Pet wiki
-│   │   └── gears/        # Gear wiki
-│   ├── pets/page.tsx     # Pet calculator
-│   └── blog/page.tsx     # Blog/guides
-├── layout.tsx            # Legacy layout (to be migrated)
-├── globals.css           # Global styles
-└── middleware.ts         # i18n middleware
+├── blog/                 # Blog section (English)
+│   ├── page.tsx          # Blog index page
+│   └── [slug]/page.tsx   # Individual blog articles
+├── zh/                   # Chinese localized routes
+│   ├── blog/             # Chinese blog section
+│   │   ├── page.tsx      # Chinese blog index
+│   │   └── [slug]/page.tsx # Chinese blog articles
+│   └── mutations/page.tsx # Chinese mutations page
+├── page.tsx              # Main calculator page (English)
+├── trade/page.tsx        # Trade analyzer
+├── mutations/page.tsx    # Mutation wiki
+├── crops/page.tsx        # Crop wiki  
+├── pets/page.tsx         # Pet calculator
+├── pets-wiki/page.tsx    # Pet wiki
+├── gears/page.tsx        # Gear wiki
+├── layout.tsx            # Root layout with SEO
+└── globals.css           # Global styles
 ```
 
 ## Key Business Logic
@@ -136,10 +137,15 @@ Chinese: /zh/wiki/mutations
 - **Open Graph**: Social media optimization for all pages
 
 ### Content Strategy
-- Comprehensive wiki sections with detailed game information
-- SEO-optimized content blocks with relevant keywords
-- Expert guides and strategy sections
-- FAQ structured data for rich snippets
+- **Comprehensive Wiki Sections**: Detailed game information with structured data
+- **SEO-Optimized Blog**: 4 detailed articles with professional farming strategies
+  - Complete Beginner's Guide (8,000+ words)
+  - Best Mutation Combinations guide
+  - Trading & WFL Analysis guide  
+  - Top 10 Profitable Crops analysis
+- **Multi-language Content**: Full Chinese translations for key pages
+- **Expert Guides**: Professional strategy sections with actionable advice
+- **FAQ Structured Data**: Rich snippets for search engines
 
 ## Development Notes
 
