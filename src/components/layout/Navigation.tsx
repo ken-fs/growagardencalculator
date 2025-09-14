@@ -2,7 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { t, type Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 interface NavigationProps {
@@ -12,38 +15,43 @@ interface NavigationProps {
 export const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
+  
+  // Get current locale from pathname
+  const currentLocale: Locale = pathname.startsWith('/zh') ? 'zh' : 'en';
+  const localePrefix = currentLocale === 'en' ? '' : '/zh';
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   const navItems = [
-    { title: "Calculator", href: "/", description: "Crop value calculation" },
+    { title: t("nav.calculator", currentLocale), href: `${localePrefix}/`, description: "Crop value calculation" },
     {
-      title: "Pet",
-      href: "/pets",
+      title: t("nav.pets", currentLocale),
+      href: `${localePrefix}/pets`,
       description: "Pet weight and value calculation",
     },
     {
-      title: "Mutation Wiki",
-      href: "/mutations",
+      title: t("nav.mutations", currentLocale),
+      href: `${localePrefix}/mutations`,
       description: "Complete mutation guide",
     },
-    { title: "Crop Wiki", href: "/crops", description: "Complete crop guide" },
+    { title: t("nav.crops", currentLocale), href: `${localePrefix}/crops`, description: "Complete crop guide" },
     {
-      title: "Pet Wiki",
-      href: "/pets-wiki",
+      title: `${t("nav.pets", currentLocale)} Wiki`,
+      href: `${localePrefix}/pets-wiki`,
       description: "Complete pet guide",
     },
-    { title: "Gear Wiki", href: "/gears", description: "Complete gear guide" },
+    { title: t("nav.gears", currentLocale), href: `${localePrefix}/gears`, description: "Complete gear guide" },
     {
-      title: "Trade Analysis",
-      href: "/trade",
+      title: t("nav.trade", currentLocale),
+      href: `${localePrefix}/trade`,
       description: "WFL trade analysis",
     },
     {
-      title: "Blog",
-      href: "/blog",
+      title: t("nav.blog", currentLocale),
+      href: `${localePrefix}/blog`,
       description: "Expert farming guides",
     },
   ];
@@ -53,7 +61,7 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 group">
+            <Link href={localePrefix || "/"} className="flex items-center space-x-3 group">
               <div className="w-10 h-10 tech-gradient rounded-lg flex items-center justify-center shadow-tech-glow group-hover:animate-pulse-glow transition-all duration-300">
                 <span className="text-white font-bold text-lg">G</span>
               </div>
@@ -64,21 +72,26 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-muted-foreground hover:text-tech-glow px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:shadow-tech-glow hover:bg-secondary/50 relative group"
+                className={cn(
+                  "text-muted-foreground hover:text-tech-glow px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:shadow-tech-glow hover:bg-secondary/50 relative group",
+                  pathname === item.href && "text-tech-glow bg-secondary/30"
+                )}
               >
                 <span className="relative z-10">{item.title}</span>
                 <div className="absolute inset-0 rounded-md bg-gradient-to-r from-tech-blue/20 to-tech-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="icon"
@@ -113,13 +126,16 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
         {/* Mobile Navigation Menu */}
         {isMounted && isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-secondary/50 rounded-lg mt-2 border border-tech-glow/30 shadow-tech-glow">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-tech-glow hover:bg-secondary/70 transition-all duration-300 hover:shadow-tech-glow group"
+                  className={cn(
+                    "block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-tech-glow hover:bg-secondary/70 transition-all duration-300 hover:shadow-tech-glow group",
+                    pathname === item.href && "text-tech-glow bg-secondary/30"
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
                   <div>

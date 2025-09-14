@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Home",
+    "calculator": "Calculator",
+    "trade": "Trade Analysis",
+    "wiki": "Wiki",
+    "mutations": "Mutations",
+    "crops": "Crops",
+    "pets": "Pets",
+    "gears": "Gears",
+    "blog": "Blog",
+    "guides": "Guides"
+  },
+  "meta": {
+    "title": {
+      "home": "Grow A Garden Calculator - Free Roblox Farm Game Tool 2024",
+      "mutations": "Grow A Garden Mutation Wiki - Complete Guide & Multipliers",
+      "crops": "Grow A Garden Crop Wiki - All Crops Value Guide",
+      "pets": "Grow A Garden Pet Wiki - Complete Pet Value Calculator",
+      "gears": "Grow A Garden Gear Wiki - Complete Equipment Guide",
+      "trade": "Grow A Garden Trade Analyzer - WFL Calculator",
+      "blog": "Grow A Garden Guides & Tips - Expert Farming Strategies"
+    },
+    "description": {
+      "home": "Best free Grow A Garden calculator for Roblox! Calculate crop values, pet weights, mutations, and analyze trades. Get the most sheckles with our professional farming calculator.",
+      "mutations": "Complete Grow A Garden mutation guide! Learn all mutation types, multipliers, and combinations. Maximize your crop values with the best mutation strategies.",
+      "crops": "Complete Grow A Garden crop wiki! All crop information with base values, categories, and rarity guides. Find the best crops for maximum profit.",
+      "pets": "Complete Grow A Garden pet guide! Calculate pet weights and values. Complete database of all pets with rarity information.",
+      "gears": "Complete Grow A Garden gear wiki! All equipment information with values and categories. Find the best gears for farming optimization.",
+      "trade": "Analyze your Grow A Garden trades! Our WFL (Win/Fair/Loss) calculator helps you make profitable trades with accurate value analysis.",
+      "blog": "Expert Grow A Garden guides and strategies! Learn farming tips, mutation combinations, and profit maximization techniques."
+    }
+  },
+  "wiki": {
+    "mutations": {
+      "title": "Mutation Wiki",
+      "subtitle": "Complete Grow A Garden mutation information guide",
+      "growth": {
+        "title": "Growth Mutations",
+        "description": "Only one growth mutation can be selected, providing the highest value multiplier"
+      },
+      "temperature": {
+        "title": "Temperature Mutations", 
+        "description": "Only one temperature mutation can be selected, affecting crop growth environment"
+      },
+      "environmental": {
+        "title": "Environmental Mutations",
+        "description": "Multiple environmental mutations can be selected, providing various special effects"
+      },
+      "combinations": {
+        "title": "Mutation Combination Recommendations",
+        "description": "Recommended mutation combinations for maximum value",
+        "basic": {
+          "title": "Basic Combination",
+          "description": "Suitable for new players",
+          "multiplier": "Total Multiplier"
+        },
+        "advanced": {
+          "title": "Advanced Combination", 
+          "description": "Suitable for experienced players"
+        },
+        "ultimate": {
+          "title": "Ultimate Combination",
+          "description": "For players pursuing maximum limits"
+        }
+      }
+    },
+    "crops": {
+      "title": "Crop Wiki",
+      "subtitle": "Complete Grow A Garden crop information database",
+      "categories": {
+        "fruit": "Fruits",
+        "vegetable": "Vegetables", 
+        "flower": "Flowers",
+        "special": "Special"
+      },
+      "rarity": {
+        "common": "Common",
+        "uncommon": "Uncommon",
+        "rare": "Rare", 
+        "epic": "Epic",
+        "legendary": "Legendary"
+      },
+      "baseValue": "Base Value",
+      "category": "Category",
+      "searchPlaceholder": "Search crops..."
+    },
+    "pets": {
+      "title": "Pet Wiki",
+      "subtitle": "Complete Grow A Garden pet information and calculator",
+      "calculator": "Pet Weight Calculator",
+      "wiki": "Pet Information Wiki",
+      "categories": {
+        "farm": "Farm Pets",
+        "wild": "Wild Pets",
+        "special": "Special Pets"
+      }
+    },
+    "gears": {
+      "title": "Gear Wiki",
+      "subtitle": "Complete Grow A Garden equipment and gear guide", 
+      "categories": {
+        "sprinkler": "Sprinklers",
+        "fertilizer": "Fertilizers",
+        "tool": "Tools",
+        "decoration": "Decorations"
+      }
+    }
+  },
+  "calculator": {
+    "crop": {
+      "title": "Crop Value Calculator",
+      "selectCrop": "Select Crop",
+      "weight": "Weight",
+      "quantity": "Quantity", 
+      "friendBoost": "Friend Boost (%)",
+      "mutations": "Mutations",
+      "calculate": "Calculate",
+      "results": "Calculation Results",
+      "baseValue": "Base Value",
+      "totalValue": "Total Value",
+      "multiplier": "Total Multiplier"
+    },
+    "trade": {
+      "title": "Trade Analyzer",
+      "yourValue": "Your Items Value",
+      "theirValue": "Their Items Value",
+      "analyze": "Analyze Trade",
+      "result": "Trade Analysis Result",
+      "profit": "Profit",
+      "recommendation": "Recommendation",
+      "win": "WIN",
+      "fair": "FAIR",
+      "loss": "LOSS"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "none": "None",
+    "clear": "Clear",
+    "close": "Close",
+    "open": "Open"
+  }
+}

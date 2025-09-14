@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "首页",
+    "calculator": "计算器",
+    "trade": "交易分析",
+    "wiki": "百科",
+    "mutations": "突变",
+    "crops": "作物",
+    "pets": "宠物",
+    "gears": "装备",
+    "blog": "博客",
+    "guides": "指南"
+  },
+  "meta": {
+    "title": {
+      "home": "Grow A Garden 计算器 - 免费Roblox农场游戏工具 2024",
+      "mutations": "Grow A Garden 突变百科 - 完整指南和倍数",
+      "crops": "Grow A Garden 作物百科 - 所有作物价值指南",
+      "pets": "Grow A Garden 宠物百科 - 完整宠物价值计算器",
+      "gears": "Grow A Garden 装备百科 - 完整装备指南",
+      "trade": "Grow A Garden 交易分析器 - WFL计算器",
+      "blog": "Grow A Garden 指南与技巧 - 专家农场策略"
+    },
+    "description": {
+      "home": "最好的免费Grow A Garden计算器！计算作物价值、宠物重量、突变和交易分析。使用我们专业的农场计算器获得最多的金币。",
+      "mutations": "完整的Grow A Garden突变指南！学习所有突变类型、倍数和组合。通过最佳突变策略最大化作物价值。",
+      "crops": "完整的Grow A Garden作物百科！包含基础价值、分类和稀有度指南的所有作物信息。找到利润最大的作物。",
+      "pets": "完整的Grow A Garden宠物指南！计算宠物重量和价值。包含所有宠物稀有度信息的完整数据库。",
+      "gears": "完整的Grow A Garden装备百科！包含价值和分类的所有装备信息。找到最佳的农场优化装备。",
+      "trade": "分析你的Grow A Garden交易！我们的WFL（盈利/公平/亏损）计算器通过准确的价值分析帮助你进行有利可图的交易。",
+      "blog": "专家Grow A Garden指南和策略！学习农场技巧、突变组合和利润最大化技术。"
+    }
+  },
+  "wiki": {
+    "mutations": {
+      "title": "突变百科",
+      "subtitle": "完整的Grow A Garden突变信息指南",
+      "growth": {
+        "title": "生长突变",
+        "description": "只能选择一个生长突变，提供最高的价值倍数"
+      },
+      "temperature": {
+        "title": "温度突变",
+        "description": "只能选择一个温度突变，影响作物生长环境"
+      },
+      "environmental": {
+        "title": "环境突变",
+        "description": "可以选择多个环境突变，提供各种特殊效果"
+      },
+      "combinations": {
+        "title": "突变组合推荐",
+        "description": "获得最大价值的推荐突变组合",
+        "basic": {
+          "title": "基础组合",
+          "description": "适合新手玩家",
+          "multiplier": "总倍数"
+        },
+        "advanced": {
+          "title": "进阶组合",
+          "description": "适合有经验的玩家"
+        },
+        "ultimate": {
+          "title": "终极组合",
+          "description": "适合追求极限的玩家"
+        }
+      }
+    },
+    "crops": {
+      "title": "作物百科",
+      "subtitle": "完整的Grow A Garden作物信息数据库",
+      "categories": {
+        "fruit": "水果",
+        "vegetable": "蔬菜",
+        "flower": "花卉",
+        "special": "特殊"
+      },
+      "rarity": {
+        "common": "普通",
+        "uncommon": "不普通",
+        "rare": "稀有",
+        "epic": "史诗",
+        "legendary": "传说"
+      },
+      "baseValue": "基础价值",
+      "category": "分类",
+      "searchPlaceholder": "搜索作物..."
+    },
+    "pets": {
+      "title": "宠物百科",
+      "subtitle": "完整的Grow A Garden宠物信息和计算器",
+      "calculator": "宠物重量计算器",
+      "wiki": "宠物信息百科",
+      "categories": {
+        "farm": "农场宠物",
+        "wild": "野生宠物",
+        "special": "特殊宠物"
+      }
+    },
+    "gears": {
+      "title": "装备百科",
+      "subtitle": "完整的Grow A Garden装备和道具指南",
+      "categories": {
+        "sprinkler": "洒水器",
+        "fertilizer": "肥料",
+        "tool": "工具",
+        "decoration": "装饰"
+      }
+    }
+  },
+  "calculator": {
+    "crop": {
+      "title": "作物价值计算器",
+      "selectCrop": "选择作物",
+      "weight": "重量",
+      "quantity": "数量",
+      "friendBoost": "好友加成 (%)",
+      "mutations": "突变",
+      "calculate": "计算",
+      "results": "计算结果",
+      "baseValue": "基础价值",
+      "totalValue": "总价值",
+      "multiplier": "总倍数"
+    },
+    "trade": {
+      "title": "交易分析器",
+      "yourValue": "你的物品价值",
+      "theirValue": "对方物品价值",
+      "analyze": "分析交易",
+      "result": "交易分析结果",
+      "profit": "利润",
+      "recommendation": "推荐",
+      "win": "盈利",
+      "fair": "公平",
+      "loss": "亏损"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "search": "搜索",
+    "filter": "筛选",
+    "all": "全部",
+    "none": "无",
+    "clear": "清除",
+    "close": "关闭",
+    "open": "打开"
+  }
+}
