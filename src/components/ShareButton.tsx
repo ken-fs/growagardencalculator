@@ -15,7 +15,7 @@ export function ShareButton({ title, url, className, children }: ShareButtonProp
           title,
           url
         });
-      } catch (error) {
+      } catch {
         // User cancelled sharing or sharing failed
         console.log('Sharing cancelled or failed');
       }
@@ -24,7 +24,7 @@ export function ShareButton({ title, url, className, children }: ShareButtonProp
       try {
         await navigator.clipboard.writeText(url);
         alert('链接已复制到剪贴板！');
-      } catch (error) {
+      } catch {
         // Fallback fallback - show alert with URL
         alert(`请复制链接: ${url}`);
       }

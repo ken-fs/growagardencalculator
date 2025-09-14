@@ -51,12 +51,12 @@ export function getMessages(locale: Locale = 'en') {
 
 export function t(key: string, locale: Locale = 'en') {
   const keys = key.split('.');
-  let value: any = getMessages(locale);
+  let value: unknown = getMessages(locale);
   
   for (const k of keys) {
-    value = value?.[k];
+    value = (value as Record<string, unknown>)?.[k];
     if (value === undefined) break;
   }
   
-  return value || key;
+  return (value as string) || key;
 }
